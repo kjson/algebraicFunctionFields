@@ -1,0 +1,461 @@
+
+
+\bigskip
+For the purpose of these notes, 
+we will let $k$ be any arbitrary field.
+
+\begin{definition} \label{functionField}    
+    An algebraic function field $F/k$ of one
+    variable over $k$ is a field extension $k \subseteq F $ such 
+    that $F$ is a finite field extension of $k (x)$ for 
+    some $x \in F$ which is transcendental over $k$. For simplicity,
+    we refer to $F/k$ as a function field.  
+\end{definition}
+
+\begin{example} \label{rational}
+    Let $F = k(x)$ for some transcendental element $x$ 
+    over $k$. Then $F$ is an function field over $k$ and is called
+     the \textit{rational} function field over $k$. 
+\end{example}
+
+\begin{example}
+    $\Rat(\sqrt{2})/\Rat$ is not a function field because $\sqrt{2}$ is 
+    algebraic over $\Rat$.
+\end{example}
+
+\begin{example} \label{elliptic}
+    Let $p = y^2 + x^3 - x \in \Comp [x,y]$. Since $p$ is 
+    irreducible over $\Comp$ (exercise \ref{irriduciblePoverC}), 
+    the ring $A = \Comp[x,y]/ (p)$ is an integral domain. 
+    Therefore we may consider the field of fractions $F$ of $A$. 
+    Then $F/\Comp$ is a function field in one variable 
+    over $\Comp$ (exercise \ref{irriduciblePoverC}).
+\end{example}
+
+\begin{example}
+    The field of fractions $k(x,y)$ of a polynomial ring $k[x,y]$ in two variables
+    over $k$ is not a function field in one variable: If it were, then 
+    $k(x,y)/k(x)$ would have to be a finite extension. This contradicts the 
+    algebraic independence of $x,y$ in $k[x,y]$.
+\end{example}
+
+\begin{proposition} \label{transIFFfinite}
+    Let $F/k$ be an algebraic function field. 
+    Then $z \in F$ is transcendental over $k$ if and only if the 
+    extension $F/k(z)$ is of finite degree. 
+\end{proposition}
+
+\begin{proof}
+    By definiton $F$ is a finite extension of $k(x)$ for some transcendental 
+    element $x\in F$. Let $z \in F $, then we have the following chain of 
+    inclusions; $ k \subseteq k(z) \subseteq F$. Suppose $z \in F $ is 
+    transcendental over $k$. Since $F$ is a finite extension of $k(x)$, 
+    $z$ is algebraic over $k(x)$, so there exists 
+    $f(T) = a_0(x) + a_1(x)T + ... + a_n(x)T^n \in k(x)[T] \notzero $ 
+    such that $f(z)= 0$, that is $0 = a_0(x) + a_1(x)z + ... + a_n(x)z^n$. 
+    Notice that if all coefficients $a_0(x),a_1(x),...,a_n(x)$ were only in
+    $k$, then $z$ would not be transcendental over $k$. So there must be at 
+    least one coefficient in $k(x)$ which is not in $k$. We may re-write $f$ 
+    as a polynomial in one variable with coefficients in $k(z)$ with $f(x) = 0 $. 
+    Hence $x$ is algebraic over $k(z)$ and $[k(x,z) : k(z) ] < \infty$. 
+    By definition $[F : k(x,z)] < \infty $, so $[F : k(z)] = [F: k(x,z)][k(x,z) : k(z)] < \infty$. 
+    Conversly, assume $z \in F $ is algebraic over $k$ and suppose that $F/k(z)$ 
+    is an extension of finite degree, then $[F : k(z)] < \infty $ and thus 
+    $[F:k ] = [F: k(z)][k(z) : k ] < \infty $, which would also imply 
+    $[k(x) : k ] < \infty$, which is impossible since $x$ is transcendental over $k$.  
+\end{proof}
+
+\begin{definition} \label{valuationRing}
+    A valuation ring of a function field $F/k$ is a ring 
+    $\OV \subseteq F $ with the following properties:
+    \begin{enumerate}[(i)]
+        \item \label{strictContain} $k \subsetneqq \OV \subsetneqq F$
+        \item \label{zorzinvers} For every $z \in F $, we have that $z \in \OV $ or $ z^{-1} \in \OV$
+    \end{enumerate}
+\end{definition}
+
+\begin{example} \label{rationalValuationRing}
+    Consider the rational function field $k(x)/k$. Let $p$ be an irreducible 
+    polynomial in $k[x]$. Then the ideal $(p)$ is prime in $k[x]$ and thus we
+    may consider the localiztion of $k[x]$ at $(p)$, denoted $\OV_p$. That is, 
+    $\OV_p = \lbrace f/g \mid f,g\in k[x], g\notin (p)\rbrace$ 
+    $\OV_p$ is a valution ring of the function field $k(x)/k$: 
+    Clearly $k\subsetneqq \OV_p$. Since $1/p \notin \OV_p $ but $1/p \in k(x)$,
+    $\OV_p \subsetneqq k(x)$. So $\OV_p$ satisfies condition \eqref{strictContain} 
+    of definition \ref{valuationRing}. To verify condition \eqref{zorzinvers},
+    let $z = f/g \in k(x)$. If $g \notin (p)$,
+    then $z \in \OV_p$ by definition. If $g \in (p)$ and $f \notin (p)$, then $z^{-1}\in \OV_p$. 
+    If Both $f,g\in (p)$. Then $f = p^nu$ and $g = p^mv$ for some $u,v \in k[x]$
+    such that $u,v \notin (p)$. Suppose $n \geq m $, then $z = f/g = p^{n-m}u/v \in \OV_p$,
+    since $v \notin (p)$. If $n < m$, then $z = f/g = u/p^{m-n}v$, 
+    hence $z^{-1}\in \OV_p$, since $u \notin (p)$. Hence 
+    for every $z \in k(x)$, $z \in \OV_p$ or $z^{-1} \in \OV_p$.
+\end{example}
+
+\begin{example}
+    Let $F$ be the field of fractions of the integral domain $A$ as 
+    in example \ref{elliptic}. Consider the prime ideal $(x,y) \in \Comp[x,y]$.
+    Since $(x,y)$ contains the kernel of the projection 
+    $\Comp[x,y] \stackrel{\pi}{\longrightarrow} A$, the ideal $\m = \pi((x,y))$ 
+    is prime in $A$ (exercise \ref{primeontoprime}). 
+    Hence we may consider the localization of $A$ at $\m$, denoted $A_\m$.
+    Then $A_\m$ is a valution ring of the function field $F/\Comp$ 
+    (exercise \ref{irriduciblePoverC}).   
+\end{example}
+
+\begin{proposition} \label{propAboutValuationRings}
+    Let $\OV$ be a valuation ring of a function 
+    field $F/k$. Then the following hold; 
+    \begin{enumerate}[(a)]
+        \item $\OV$ is a local ring where $P = \OV \backslash \OV^*$ 
+        denotes the maximal ideal of $\OV$.
+        \item Let $0 \neq x \in F$. Then $x \in P \Leftrightarrow x^{-1} \notin \OV $
+        \item Let $\tilde{k}$ denote the algebraic closure of $k$ in $F$. 
+        Then $\tilde{k} \subseteq \OV$ and $\tilde{k} \cap P = \lbrace 0 \rbrace $. 
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof} \label{valuationLocal}
+    \begin{enumerate}[(a)]
+        \item It suffices to show that $P$ is an ideal of 
+        $\OV$, as any ideal that properly contains $P$ would also 
+        contain a unit: Let $x \in P, z \in \OV$, then $x  \notin \OV^*$ 
+        by definition. Hence $xz \notin \OV^*$, thus $xz \in P$. 
+        Let $x,y \in P$. Then either $xy^{-1} \in \OV$ or 
+        $x^{-1}y \in \OV$. Assume $xy^{-1} \in \OV $. 
+        Then $1 + xy^{-1} \in \OV$, since $1 \in \OV$. Hence 
+        $x + y = y(1 + xy^{-1}) \in P $.
+        \item Notice that $x \in P \Leftrightarrow x \in \OV \backslash \OV^* 
+        \Leftrightarrow x \notin \OV^* \Leftrightarrow x^{-1} \notin \OV$.   
+        \item Let $z \in \tilde{k} \notzero $ and suppose that $z \notin \OV $, 
+        then by the definition of a valuation ring, $z^{-1}  \in \OV $. 
+        Since $z^{-1}$ is algebraic over $k$, there exists a $\fX \in k[X] \notzero$ 
+        such that $f(z^{-1}) = 0 $. Then, $a_0 + a_1(z^{-1}) + ... + a_n(z^{-1})^n = 0 $. 
+        Assume $f$ is one of the non-zero polynomials of minimal degree satisfying 
+        $f(z^{-1}) = 0$. We may also assume that $a_0 = 1$; To see this, suppose $a_0 = 0 $, 
+        then $0 = a_1(z^{-1}) + ... + a_n(z^{-1})^n = z^{-1}(a_1 + a_2(z^{-1}) 
+        + ... + a_n(z^{-1})^{n-1}$. 
+        Since $z^{-1} \neq 0$, we have found another polynomial 
+        $g(X) = a_1 + a_2X + ... + a_nx^{n-1} \in k[X] \notzero $ such that 
+        $g(z^{-1}) = 0$ and $deg(g) < deg(f) $. This contradicts the minimality of 
+        $f$. If $a_0 \neq 1$ and $a_0 \neq 0$, then since $a_0 \in k$, there 
+        exists $a_0^{-1} \in k$ such that $a_0a_0^{-1} = 1 $. Then 
+        $a_0^{-1}f= 1 + a_0^{-1}a_1X + ... + a_0^{-1}a_nX^n $ is a new 
+        polynomial that is still zero on $z^{-1}$ and has the same degree 
+        as $f$. Thus we may write $f(X) = 1 + a_1X + ... + a_nX^n  $ and therefore
+        $-1 = z^{-1}(a_1 + ... + a_n(z^{-1})^{n-1}) \Longrightarrow z = 
+        -(a_1 + ... + a_n(z^{-1})^{n-1}) \in \OV $. 
+        This is a contradiction to the assumption $z \notin \OV $. Hence 
+        $\tilde{k} \subseteq \OV $. Lastly, the inverse of an algebraic 
+        element is algebraic and $\tilde{k} \subseteq \OV^* $, 
+        hence $\tilde{k} \cap P = \lbrace 0 \rbrace $. 
+    \end{enumerate}
+\end{proof} 
+
+\begin{example}
+    As in example \ref{rationalValuationRing}, consider the rational 
+    function field $k(x)/k$.
+    Let $p$ be an irreducible poylnomial in $k[x]$. 
+    Then $p\OV_p$ is the unique maximal ideal
+    of the valuation ring $\OV_p$. To verify this, 
+    let $z = f/g \in p\OV_p$, then $g \notin (p)$ but $f \in (p)$. 
+    Hence $z^{-1} \notin \OV_p$. Therefore $z \in \OV_p \backslash \OV_p^*$. Let 
+    $z = f/g \in \OV_p \backslash \OV_p^*$, then $z^{-1} \notin \OV_p$, hence $f \in (p)$ and 
+    $g \notin (p)$. Thus $z \in p\OV_p$. So $p\OV_p = \OV_p \backslash \OV_p^*$. 
+\end{example}
+
+\begin{definition}
+    Let $\OV$ be a valution ring of a function field $F/k$ and 
+    $P= \OV \backslash \OV^* $ be its maximal ideal. We call $P$ a \textit{place} of 
+    the function field $F/k$. Since $\OV$ is uniquely determined by 
+    $P$, that is, $\OV = \lbrace z \in F \mid z^{-1} \notin P \rbrace$, we 
+    often denote it $\OV_p$, refered to as the valuation ring at place 
+    $P$. We use $\PF$ to denote the set of all places of $F/k$ 
+    and $\mathbb{V}_F$ to denote the set of all valuation rings of $F/k$.
+\end{definition}
+
+\begin{example}
+	Let $F=k(x)$ be the rational function field over $k$ as in example \ref{rational}.
+	Example \ref{rationalValuationRing} shows $ \lbrace k[x]_{(p)} \mid 
+	\text{p is irreducible in } k[x] \rbrace \subseteq \mathbb{V}_F  $.
+	Theorem \ref{noPlaceLikeHome} shows this set is all valuation 
+	rings of $k(x)/k$ except one. Furthermore $
+	\lbrace pk[x]_{(p)} \mid 
+	\text{p is a irreducible polynomial in } k[x] \rbrace \subseteq \mathbb{P}_F
+	$, where $pk[x]_{(p)}$ denotes the maximal ideal of the local ring $k[x]_{(p)}$
+\end{example}
+
+\begin{definition}
+	Let $P$ be a place of a function field $F/k$ and $\OV_P$ the valuation ring 
+	at place $P$. Since $P$ is a maximal ideal, the quotient ring $\OV_P/P$ is a 
+	field. We call this the residue class field of $P$, denoted by $\FP$. The
+	degree of a place $P$ is defined as $\deg P = [\FP : k]$ and we call a place
+	of degree one a \textit{rational} place of $F/k$.
+\end{definition}
+
+\begin{example}
+	For the rational function field $F = \Comp(x)$ over the complex numbers $\Comp$, 
+	all places of the form $P :=p\Comp[x]_{(p)}$ for some irreducible $p \in \Comp[x]$, 
+	have degree 1: Since $\Comp $ is algebraically closed, every irreducible
+	polynomial $p$ is linear. Thus the degree of $P$ is equal 
+	to the degree of the field extension $[F_P : \Comp]$. Theorem \ref{propaboutrationals}
+	shows that $F_P \cong \Comp[x]/(p)$. Thus $\text{deg} P = [\Comp[x]/(p):\Comp] = 1$. 
+	More generally, all places of this form, over an algebraically closed field are degree 1.
+	This is not true in any arbitrary field: Consider the polynomial $f = x^2 +1 \in \R [x]$. The
+	place $f\R[x]_{(f)}$ of the function field $\R(x)/\R$ has degree 2. 
+\end{example}
+
+
+\begin{definition}  \label{discreteValuation}
+	Let $k$ be a field. Let $\infty$ denote any element that is not in $\Z$ 
+	satisfying; $\infty + \infty = \infty + n = n+ \infty = \infty  $ and 
+	$\infty > m $ For all $n,m \in \Z$.  A discrete valuation of $F/k$ is a 
+	function $ v : F \longrightarrow \Z \cup \lbrace \infty \rbrace $ with the
+	following properties: 
+	\begin{enumerate}[i)]
+		\item \label{cond1} $v(x) = \infty \Leftrightarrow x = 0 $.
+		\item \label{cond2} $v(xy) = v(x) + v(y) $ for all $x,y \in F$.
+		\item \label{cond3} $v(x + y) \geq min \lbrace  v(x),v(y) \rbrace  $ for all $x,y \in F$.
+		\item \label{cond4} There exists an element $z \in F$ with $v(z)=1$.
+		\item \label{cond5} $v(a)=0 $ for all $0 \neq a \in k$
+	\end{enumerate}
+\end{definition}
+
+\begin{lemma} \label{strongtriange}
+	Let $v$ discrete valuation on a function field $F/k$. Then;
+	$$v(x + y) = min \lbrace v(x),v(y) \rbrace $$ for all $x,y\in  F$ such that $v(x) \neq v(y) $. 
+\end{lemma}
+
+\begin{proof}
+	Asssume $v(x) < v(y)$ and suppose $v(x + y) \neq min \lbrace v(x),v(y) \rbrace $.
+	Then $v(x+y) > v(x)$ by \eqref{cond3}. Therefore 
+	$v(x) = v((x+y) - y) \geq \text{min} \lbrace v_(x+y),v(y) \rbrace > v(x)$, 
+	which is impossible.  
+\end{proof}
+
+\begin{example} \label{infinityvaluation}
+	Consider the rational function field $k(x)/k$. We define the map 
+	$k(x) \stackrel{v_{\infty}}{\longrightarrow} \Integ \cup \lbrace \infty \rbrace $ by: 
+	for all $z = f/g \in k(x) \backslash \lbrace 0 \rbrace $,
+	$v_\infty(z)= \text{deg}(g) - \text{deg}(f)$ and $v_\infty(0) = \infty$.
+	Then $v_\infty$ is a discrete valution of the $k(x)/k$. 
+\end{example}
+
+\begin{proof}
+	Property \eqref{cond1} follows by definition of $v_\infty$. 
+	Let $x = f/g, y = f^{\prime}/g^{\prime} \in k(x)$. Then 
+	\begin{align*}
+		v_\infty(xy) &= v_\infty(\frac{f}{g}  \frac{f^{\prime}}{g^{\prime}} ) \\
+		&=\text{deg}(gg^{\prime}) - \text{deg}(ff^{\prime}) \\
+		&= \text{deg}(g) + \text{deg}(g^{\prime}) - \text{deg}(f) - \text{deg}(f^{\prime}) \\
+		&= v_\infty(x) + v_\infty(y)
+	\end{align*}
+	This shows property \eqref{cond2}. Assume $v_\infty(x) \geq v_\infty(y)$. Then 
+	$\text{deg}(g) - \text{deg}(f) \geq \text{deg}(g^{\prime}) - \text{deg}(f^{\prime}) 
+	\Longrightarrow \text{deg}(g) + \text{deg}(f^{\prime})  \geq \text{deg}(g^{\prime}) +  \text{deg}(f)
+	\Longrightarrow \text{deg}(gf^{\prime}) \geq \text{deg}(g^{\prime}f)$. So  
+	\begin{align*}
+		v_\infty(x+ y) &= v_\infty(\frac{f}{g} + \frac{f^{\prime}}{g^{\prime}} ) \\
+		&= v_\infty(\frac{fg^{\prime} + f^{\prime}g}{gg^{\prime}} ) \\
+		&= \text{deg}(gg^{\prime}) - \text{deg} (fg^{\prime} + f^{\prime}g) \\
+		&= \text{deg}(gg^{\prime})  - \text{max} \lbrace \text{deg}(fg^{\prime}),
+		\text{deg}(f^{\prime}g) \rbrace \\
+		&= \text{deg}(gg^{\prime})   - \text{deg}(f^{\prime}g) \\
+		&= \text{deg}(g) + \text{deg}(g^{\prime}) - \text{deg}(g) - \text{deg}(f^{\prime}) \\
+		&= \text{deg}(g^{\prime}) - \text{deg}(f^{\prime})  \\
+		&= v_\infty(y) \\
+		&= \text{min} 
+		\lbrace v_\infty(x), v_\infty(y) \rbrace
+	\end{align*} So $v_\infty$ satisfies \eqref{cond3}. Lastly $v_\infty(1/x) = 1$ 
+	and clearly $v_\infty(a) = 0 $ for all $a \in k^* \backslash \lbrace 0 \rbrace$. 
+	So $v_\infty $ satisfies conditions \eqref{cond4} and \eqref{cond5}. Thus $v_\infty$
+	is a discrete valuation on the function field $k(x)/k$.
+\end{proof}
+
+\begin{theorem} \label{primeValuation}
+	Let $\OV_P$ be a valution ring of a function field $F/k $ 
+	with maximal ideal $P$.
+	\begin{enumerate}[(a)]
+		\item \label{Pisalwaysprinzipal} $P$ is a principal ideal.
+		\item \label{existst} If $P = t\OV$, then each $0 \neq z \in F$ has a 
+		unique representation of the form $z = t^n u$ for some
+		$n \in \Z $ and $u \in \OV^*$.  
+		\item \label{OVisprincipaldomain} $\OV$ is a principal ideal domain. More precisely, if 
+		$P = t \OV$ and $ \lbrace 0 \rbrace \neq  I \subseteq \OV$ 
+		is an ideal, then $I = t^n \OV$ for some $n \in \N$. 
+		\item  \label{valutionringbyvaluations} To a place 
+		$P \in \PF$ we associate a function $ F  \stackrel{v}{\longrightarrow} 
+		\Z \cup \lbrace \infty \rbrace $  as follows; Choose a prime element 
+		$t$ for $P$. Then every $0 \neq z \in F$ has a unique representation
+		$z = t^nu$ with $u \in \OV_P^* $ and $n \in \Z \cup \lbrace \infty \rbrace  $.
+		Define $v_P(z) = v_P(t^nu) := n $ and $v_P(0) := \infty$. 
+		The function $v_P$ is a dicrete valuation of
+		$F/k$. Moreover we have,
+		$$  \OV_P = \lbrace z \in F \mid  v_P(z) \geq  0 \rbrace $$ 
+		$$\OV_P^*  = \lbrace z \in F \mid  v_P(z) = 0   \rbrace  $$
+		$$P = \lbrace z \in F \mid v_P(z) > 0  \rbrace  $$
+		\item \label{primeiffvaleq1} An element $x \in F$ is a prime 
+		element for $P$ if and only if 
+		$v_P(x) = 1$
+		\item \label{valuationdefinesring} Conversly, suppose that $v$ is 
+		a discrete valuation of $F/k$. 
+		Then the set $P = \lbrace z \in F \mid v_P(z) > 0  \rbrace  $ is a 
+		place of $F/k$, and $\OV_P = \lbrace z \in F \mid  v_P(z) \geq  0  \rbrace $
+		is the corresponding valuation ring. 
+		\item \label{maxproperideal} Every valuation ring $\OV$ of $F/k$ 
+		is a maximal proper 
+		subring of $F$. 
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	See Stichtenoth, theorem 1.1.6 for parts \ref{Pisalwaysprinzipal}, 
+	\ref{existst} and 
+	\ref{OVisprincipaldomain}. 
+	\eqref{valutionringbyvaluations}:
+	First, we verify the conditions of a discrete valaution. \eqref{cond1}  
+	By definiton of $v_P$ we have $v_P(x)= \infty  \Leftrightarrow x = 0$. \eqref{cond2}
+	Let $x,y \in F$ and write $x = t^nu, y = t^mv $ for $n,m \in \Z$ and 
+	$u,v \in \OV_P^*$. 
+	Then $v_P(xy) = v_P(t^nut^mv) = v_P(t^{n+m}uv) = n + m = v_P(x) = v_P(y) $.
+	\eqref{cond3} We have $v_P(x + y) = v_P(t^nu+t^mv)$. If $n \geq m $, 
+	then $v_P(t^nu+t^mv) = v_P(t^m(t^{n-m}u+v)) = m + (n - m) = n \geq 
+	m = min \lbrace v_P(x), v_P(y) \rbrace$. Simularly, if $m \geq n$, then
+	$v_P(t^nu+t^mv) \geq n = min \lbrace v_P(x), v_P(y) \rbrace$. \eqref{cond4}
+	$v_P(t) = v_P(t^1) = 1 $. \eqref{cond5} Suppose $0 \neq a \in k $, 
+	then $a \in \OV_P^*$, hence $a =t^0a $, thus $v_P(a) = v_P(p^0a) = 0$. 
+	The remaining assertions in part $a)$ follow directly from the fact 
+	that every $0 \neq z \in F$ can be written
+	uniquely as $z = t^nu $ for some $n \in \Z $, $u \in \OV^*$ and condition
+	\eqref{cond5}, which asserts that every $0 \neq z \in \OV_P$ such that $z \notin P$ 
+	has discrete valuation $0$.
+	\eqref{primeiffvaleq1}: 
+	If $x$ is a prime element of $P$, then $x = x^1$, so 
+	by definition $v_P(x) = 1$. 
+	Let $x \in F$ such that $v_p(x) = 1$. Then $x = t^1u$ 
+	for some $u \in \OV^*$, thus $t = xu^{-1}$. Given any $y \in P$, $y = t^mv $ 
+	for some $v \in \OV^*$ and $m \in \Z$. Hence $y = (xu^{-1})^mv = x^mw $ 
+	for $w = u^{-m}v \in \OV^*$. So $x$ is a prime element of $P$.
+	\eqref{valuationdefinesring}:
+	Let $z \in F$, write $z = t^nu$ for some $n \in Z$ and $u \in \OV_P^*$. 
+	Suppose $n \geq 0$, then clearly 
+	$z \in \OV_P = \lbrace z \in F \mid  v_P(z) \geq  0  \rbrace  $. 
+	If $n < 0 $, then $z^{-1} = (t^{-n}u)^{-1} = t^nu^{-1}$, 
+	hence $z^{-1} \in \OV_P$. So $\OV_P$ is a valuation ring of $F$. 
+	The units of $\OV_P$ are precisely the elements with $v_P(x) \geq 0$ 
+	and $v_P(x^{-1}) \geq 0$. Hence $x = t^nu$ and $x = t^{-n}u$ with 
+	$n \in \Z$, $u \in \OV^*$ and $n \geq 0$ and $-n \geq 0$. Hence $n = 0$. 
+	So  $P = \lbrace z \in F \mid v_P(z) > 0  \rbrace = \lbrace z \in F \mid  
+	v_P(z) \geq  0  \rbrace \backslash \lbrace z \in F \mid  v_P(z) = 0  
+	 \rbrace = \OV \backslash \OV^*$. 
+	\eqref{maxproperideal}: 
+	Let $z \in F \backslash \OV$. Claim: $F = \OV[z]$: Let $y \in F$,
+	then $v_P(yz^{-k}) \geq 0$ for sufficiently large $k\geq 0 $. So
+	$w = yz^{-k} \in \OV$ and $y=wz^k \in \OV[z]$.
+\end{proof}
+
+\begin{proposition} 
+	If $P$ is a place of a function field $F/k$ and 
+	$0 \neq x \in P$, then $ \deg P \leq [F:k(x)] < \infty $.
+\end{proposition}
+
+\begin{proof}
+	Let $P \in \PF $ and $0\neq  x \in P$. There are two inequalities 
+	to show; 
+	\begin{enumerate}[(i)]
+		\item \label{lessthaninfinity} $[F:k(x)] < \infty $ 
+		\item \label{lessthandegextension} $ \deg P \leq [F:k(x)]$
+	\end{enumerate}
+	\eqref{lessthaninfinity} Since $0 \neq x \in P$ is 
+	transcendental, by proposition \ref{transIFFfinite}, $[F:k(x)]$ is finite.
+	\eqref{lessthandegextension} Suppose $a_1(x)x_1 + a_2(x)x_2 + ... + a_n(x)x_n = 0$ 
+	is some non-trivial linear combination of elements in $F$ where
+	$a_1(x),...,a_n(x) \in k(x)$. Assume that $x$ does not divide each
+	$a_i(x)$, hence each $a_i(x)$ may be expressed as $a_i(x) = a_i + g_i(x)x$ 
+	for some $g_i(x) \in k[x]$ and $a_i(x) \in k$, with not all $a_i = 0$. 
+	Since $x \in P$ and $g_i(x ) \in \OV$, we have $a_i(x) \equiv a_i$ 
+	mod $P$. If we apply the residue class map to $a_1(x)x_1 + a_2(x)x_2 + ... + a_n(x)x_n = 0$ 
+	we get $0 + P = a_1(x_1 + P) + a_2(x_2 + P)^2 + ... + a_n(x_n + P)^n $ 
+	where not all $a_i = 0$. Hence $x_1 + P,x_2 + P, ..., x_n + P $ are 
+	linearly dependent over $k$. Thus, any elements $x_1,...,x_n \in \OV$, 
+	who's residue classes $x_1 + P,...,x_n + P$ are linearly independent 
+	over $k$, are linearly independent over $k(x)$.
+\end{proof}
+
+\begin{definition}
+	Let $F/k $ be an function field. 
+	Let $z \in F $ and $P \in \PF$. We say that $P$ is 
+	a zero of $z$ if $v_P(z) > 0$; $P $ is a pole of $z $ 
+	if $v_P(z) < 0$. If $v_P(z) = m > 0$, $P$ is a zero of $z$ 
+	of order $m$; if $v_P(z) = -m < 0 $, $P$ is a pole of $z$ 
+	of order $m$.
+\end{definition}
+
+\begin{example} \label{firstencounterwithpolesanddivisors}
+	Let $F = \mathbb{C}(x)/\mathbb{C}$ be the rational function field
+	and consider the polynomial $f = x^3(x+1) \in F$. Let $P_{x}$ denote
+	the maximal ideal of 
+	$\OV_x = \lbrace f/g \mid f,g \in \Comp[x] \text{ and } g \notin (x) \rbrace $
+	The prime element for $P_x$ is the polynomial $x$. Let $v_x$ be 
+	the discrete valution corresponding to the polynomial $x$, 
+	as in theorem \ref{primeValuation}. 
+	Then $f = x^3(x+1)$. To assert that $v_x(f) = 3$, 
+	we need to show that $x+1$ is a unit in $\OV_x$.
+	Notice that $x + 1 \in  \mathcal{O}_P$ 
+	since $x \nmid 1$. Similarly $(x+1)^{-1} \in \mathcal{O}_P$ 
+	since $x \nmid x + 1 $. Hence $x+1 \in \mathcal{O}_P^*$. 
+	Therefore the valuation of $f$ at place $P_x$ is $v_x(f)= 3$. 
+	Let $P_{x+1}$ denote the maximal ideal of the valuation ring
+	$\OV_{x+1} = \lbrace f/g \mid f,g \in \Comp[x] \text{ and } g \notin (x+1) \rbrace $
+	The prime element for $P_{x+1}$ is the polynomial $x+1$. Let $v_{x+1}$ be 
+	the discrete valution corresponding to the polynomial $x+1$. 
+	A similar argument shows that $v_{x+1}(f) = 1$. So $f$ 
+	has zeros at $P_x$ and $P_{x+1}$. 
+	Let $v_\infty$be the discrete valution defined as in example \ref{infinityvaluation}. 
+	Part \eqref{valuationdefinesring} of theorem \ref{primeValuation}
+	shows that we may obtain a valution ring 
+	$
+	\OV_\infty := \lbrace f/g \in \Comp(x) \mid \deg (g) - \deg (f) \geq 0 \rbrace
+	$ 
+	with corresponding place 
+	$
+	P_\infty := \lbrace f/g \in \Comp(x) \mid \deg (g) - \deg (f) > 0 \rbrace
+	$.
+	Let $z = x^{-1}$. Then part \eqref{primeiffvaleq1} asserts that 
+	since $v_\infty(z)=1$, the element $z$ is a prime element of $P_\infty$. 
+	So $v_\infty$ may be redefined the same way as in theorem \ref{primeValuation}, 
+	where $z$ is the prime element of the place $P_\infty$.
+	Notice that $f = z^{-4}(x+1)x^{-1}$. To conclude that $v_\infty (f) = -4$,
+	it suffices to show that $(x+1)x^{-1}$ is a unit in $\OV_\infty$. 
+	We know that the units in $\OV$ are exactly those which have valuation $0$, 
+	by part \eqref{valutionringbyvaluations} of theorem \ref{primeValuation}.
+	So we compute $v_\infty((x+1)x^{-1}) = \deg(x) - \deg(x+1) = 1-1=0$. 
+	Hence $v_\infty(f) = -4$. This means the place $P_\infty$ is a pole 
+	of $f$ in $\Comp(x)/\Comp$. 
+\end{example}
+
+\begin{theorem} \label{subringIsValuation}
+	Let $F/k$ be a function field and let $R$ be a subring 
+	of $F$ with $k \subseteq R \subseteq F $. Suppose 
+	that $\lbrace 0 \rbrace \neq I \subsetneq R $ is a 
+	proper ideal of $R$. Then there is a place $P \in \PF$ 
+	such that $I \subseteq P $ and $ R \subseteq \OV_P$.  
+\end{theorem}
+
+\begin{proof}
+	See proof of theorem 1.1.13 in Stinchtenoth. 
+\end{proof}
+
+\begin{corollary} \label{everyonesgotapole}
+	Let $F/k$ be a function field, $z \in F$ transcendental 
+	over $k$. Then $z$ has at least one zero and one pole. 
+	In particular $\PF \neq \emptyset $.
+\end{corollary}
+
+\begin{proof}
+	Let $R=k[x]$ and consider the ideals $I= zR$ and $J=z^{-1}R$.
+	By theorem \ref{subringIsValuation} there exists a places
+	$P,Q\in \PF$ with $z \in P$ and $z^{-1} \in Q$, so both
+	$z$ and $z^{-1}$ have zeros in $F$. Thus both $z$ and $z^{-1}$ 
+	both have poles in $Q$ and $P$ respectively.
+\end{proof}

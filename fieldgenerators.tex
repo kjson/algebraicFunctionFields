@@ -1,0 +1,227 @@
+
+
+\begin{definition}
+An integral domain is said to be {\it normal\/} if it is 
+integrally closed in its field of fractions.
+\end{definition}
+
+\begin{proposition} \label {i12biud012oww}
+Every UFD is normal.
+\end{proposition}
+
+\begin{proof}
+Let $A $ be a UFD and let $F$ be the field of 
+fractions of $A$. Let $z \in F$, writen $z = a/b$ such that
+$0 \neq b,a \in A$ and $a,b$ share no commmon
+primes in their factorizations. If $z$ is integral over $A$. Then 
+$z^n + a_{n-1}z^{n-1} + ... + a_1z + a_0 = 0$ for some 
+$a_0,a_1,...,a_{n-1} \in A$. That is,
+$(a/b)^n + a_{n-1}(a/b)^{n-1} + ... + a_1 (a/b) + a_0 = 0$. 
+We may clear denominators to obtain 
+$a^n + a_{n-1}a^{n-1}b + ... + a_1 ab^{n-1} + a_0b^n = 0$.
+Then $a^n = -b(a_{n-1}a^{n-1} + ... + a_1 ab^{n-2} + a_0b^{n-1})$. 
+This means $b$ divides $a$. If $b$ is not a unit,
+then this imples that any prime elements
+in the factorization of $b$ appear in the factorization of $a^n$, 
+and thus also in $a$. This is a contradiction to the supposition
+that $a,b$ share no common primes in their factorization. So $b$
+must be a unit. Thus $z \in A$. 
+\end{proof}
+
+% \begin{lemma}
+% Let $A$ be a 
+% \end{lemma}
+
+
+\begin{example}
+The ring $A = \Comp[x,y]/(y-x^2)$ is normal: 
+Let $\phi : \Comp[x,y] \longrightarrow \Comp[t] $ 
+be given by $ f(x,y) \mapsto f(t,t^2)$. 
+Then $\phi $ is an onto homomorphism with kernel $(y-x^2)$. 
+Thus $\Comp[x,y]/(y-x^2) \cong \Comp[t]$, which is a UFD. 
+\end{example}
+
+\begin{example}
+The converse is not true in general. If we 
+let $A=\Comp[x,y,z]/(xy-z^2)$.
+Then $A$ is normal but not a UFD.
+To prove this, let $\phi : \Comp[z,y,z] \longrightarrow \Comp[s,t]$ 
+given as $f(x,y,z) \mapsto f(s^2,t^2,st)$. Then $\phi$ is homomorphism
+an onto the ring $B = \Comp[s^2,t^2,st]$ with kernel $(xy-z^2)$. Hence 
+$A \cong B$. We prove that $B $ is normal by 
+showing that the integral closure of $\Comp[s,t]$ in 
+$\Comp(s,t,\sqrt{st})$ is $\Comp[s,t,\sqrt{st}]$. Let 
+$u + v\sqrt{st} \in \Comp(s,t,\sqrt{st}) $ be integral over 
+$\Comp[s,t]$ for some $u,v \in \Comp(s,t)$. 
+Then since the integral closure of a integral
+domain is an integral domain, $u-v \sqrt{st}$ is in the integral
+closure of $\Comp[s,t]$ in $\Comp(s,t,\sqrt{st})$ as well. 
+Thus their sum, $2u $ belongs to this closure. Since $\Comp[s,t]$ is 
+normal, $u \in \Comp[s,t]$. Similarily, $v\sqrt{st} \in \Comp[s,t]$.
+Hence $v^2st \in \Comp[s,t], v \in \Comp(s,t)$. Clearly, then 
+$v$ can have no denominator, thus $v \in \Comp[s,t]$. Hence 
+$u + v \sqrt{st} \in \Comp[s,t]$. To see that $A$ is not a 
+UFD, notice that $z^2 = xy$. 
+\end{example}
+
+\begin{remark}
+Recall that if $R$ is an integral domain and 
+$S \subseteq R \setminus \{0\}$ is a multiplicative set
+then $S^{-1}R$ is an integral domain and
+$R \subseteq S^{-1}R \subseteq \Frac(R)$, so $R$ and $S^{-1}R$ 
+have the same field of fractions.
+\end{remark}
+
+
+\begin{lemma} \label {poifj012woid2q9}
+Let $R$ be an integral domain and $S \subseteq R \setminus \{0\}$ 
+a multiplicative set.
+If $R$ is normal then so is $S^{-1}R$.
+\end{lemma}
+
+\begin{proof}
+Let $R$ be an integral domain (not necessarily normal),
+$S \subseteq R \setminus \{0\}$ a multiplicative
+set, $K = \Frac R$, and consider 
+$ R \subseteq \tilde R \subseteq K $
+where $\tilde R$ is the integral closure of $R$ in $K$.
+Then Prop.~5.12 of Atiyah-McDonald implies that
+$S^{-1} \tilde R$ is the integral closure of $S^{-1}R$ in $S^{-1}K=K$. 
+If we now assume that $R$ is normal then $\tilde R = R$, so
+$S^{-1} R$ is the integral closure of $S^{-1}R$ in $K$, i.e., 
+$S^{-1} R$ is normal.
+\end{proof}
+
+
+\begin{proposition}  \label {0923d091sd0192s}
+Let $F/K$ be a rational function field of one variable, 
+let $P$ be a place of $F/K$ of degree $1$,
+and let $\Oeul_{P}$ be the corresponding valuation ring 
+of $F/K$.  Then there exists $t \in F$ satisfying
+$F = K(t) $ and $\Oeul_P =  k[ t^{-1} ]_{(t^{-1})} $.
+Moreover, for any such $t$,
+$K[t] $ is the intersection of all valuation rings that 
+belong to the set $\VV(F/K) \setminus \{ \Oeul_P \}$.
+
+\end{proposition}
+
+\begin{proof}
+Omitted
+\end{proof}
+
+
+let $ k$ be a field, $A =  k[x,y]$ the polynomial ring in 
+two variables over $ k$,
+$L= \Frac A =  k(x,y)$ the field of rational functions in 
+two variables, and $K =  k(F)$.
+Let $\VV(F)$ be the set of all valuation rings of the 
+function field $L/K$.
+Let $\VV^\infty(F) = \setspec{ R \in \VV(F) }{ A \nsubseteq R }$
+be the set of dicriticals of $F$.
+
+
+\begin{definition}
+Let $A =  k[x,y]$ be a polynomial ring in two variables 
+over a field $ k$.
+A {\it field generator\/} of $A= k[x,y]$ is an element
+$F \in A$ that satisfies:
+$\text{$ k(x,y) =  k(F,G)$ for some $G \in  k(x,y)$.}$
+If $F \in A$ satisfies the stronger condition
+$\text{$ k(x,y) =  k(F,G)$ for some $G \in  k[x,y]$}
+$ we call $F$ a {\it good\/} field generator of $A$.
+A field generator that is not good is said to be bad.
+\end{definition}
+
+\begin{remark}
+Given any $F \in  k[x,y] \setminus  k$, we know that
+$ k(x,y) /  k(F)$ is a function field
+of one variable. Observe that $F$ is a field generator 
+of $ k[x,y]$ if and only if 
+$ k(x,y) /  k(F)$ is the rational function field.
+\end{remark}
+
+\begin{proposition}
+Suppose that $F$ is a field generator of $A= k[x,y]$ 
+such that $1$ occurs in the list $\Delta(F)$, then $F$ is a 
+good field generator.
+\end{proposition}
+
+\begin{proof}[Proof by Daniel Daigle:]
+Let $F \in A$ be a field generator of $A$ such that 
+`$1$' occurs in $\Delta(F)$.
+Write $L =  k(x,y)$ and $K =  k(F)$, then $L/K$ is the 
+rational function field of one variable.
+Let $\VV(F)$ be the set of all valuation rings of the 
+function field $L/K$.
+Let 
+$$
+\VV^\infty(F) = \setspec{ R \in \VV(F) }{ A \nsubseteq R } = \{ R_1, \dots, R_s \}
+$$
+be the set of dicriticals of $F$. Since `$1$' occurs in
+$\Delta(F)$, one of $R_1, \dots, R_s$
+is a dicritical of degree $1$; relabelling  $R_1, \dots, R_s$ 
+if necessary, we may arrange that
+$R_1$ is a dicritical of degree $1$. Let  $P$ be the maximal 
+ideal of $R_1$; then
+$$
+\text{$P$ is a place of degree $1$ of the rational function field $L/K$.}
+$$
+Moreover, $R_1$ is the valuation ring of $P$, i.e., $R_1 = \Oeul_P$.
+By \ref{0923d091sd0192s}, there exists $t \in L$ satisfying
+$L = K(t)$, $\Oeul_P =  k[ t^{-1} ]_{(t^{-1})}$, and
+\begin{equation} \label {uqid7623erih9we8}
+K[t] = \bigcap_{\Oeul \in E} \Oeul
+\end{equation}
+where $E = \VV(F) \setminus \{ \Oeul_P \}$.
+
+Consider the ring $\Aeul = S^{-1}A$ where $S =  k[F] \setminus \{0\} \subset A \setminus \{0\}$. 
+Then
+$$
+\text{$A$ is a UFD} \overset{\ref{i12biud012oww}}{\implies} \text{$A$ is a normal}
+\overset{\ref{poifj012woid2q9}}{\implies} \text{$\Aeul$ is a normal} .
+$$
+Since $\Frac( \Aeul ) = L$, it follows that $\Aeul$ is integrally closed in $L$. Thus, 
+by Cor.~5.22 of Atiyah-McDonald,
+$\Aeul$ is equal to the intersection of all valuation rings $\Oeul$ 
+of $L$ that satisfy $\Aeul \subseteq \Oeul$.
+\begin{equation} \label {bcdkoi23w9eje}
+\Aeul = \bigcap_{\Oeul \in E'} \Oeul
+\end{equation}
+where $E'=$ set of all valuation rings $\Oeul$ of $L$ that satisfy $\Aeul \subseteq \Oeul$.
+Note that $L \in E'$; let us prove that 
+\begin{equation} \label {h9jccnodi1ds}
+E' \subseteq E \cup \{ L \} .
+\end{equation}
+Indeed, consider $\Oeul \in E'$ such that $\Oeul \neq L$, and let us prove that  $\Oeul  \in E$.
+Since $\Oeul$ is a valuation ring of $L$ such that $\Oeul \neq L$ and
+$$
+ k(F) = S^{-1}  k[F] \subseteq S^{-1}A = \Aeul \subseteq \Oeul,
+$$ 
+it follows that $\Oeul$ is a valuation ring of $L/K$, i.e., $\Oeul \in \VV(F)$. Since
+$A \subseteq \Aeul \subseteq \Oeul$, we have $\Oeul \notin \{ R_1, \dots, R_s \}$,
+so $\Oeul \in \VV(F) \setminus \{R_1\} = E$. This proves \eqref{h9jccnodi1ds}.
+
+It follows that
+\begin{equation} \label {lo923idewo}
+\text{for each $\Oeul \in E'$,\quad  $K[t] \subseteq \Oeul$.}
+\end{equation}
+
+Indeed, if $\Oeul \in E'$ then \eqref{h9jccnodi1ds} implies that $\Oeul \in E$ or $\Oeul=L$;
+in the first case we have $K[t] \subseteq \Oeul$ by \eqref{uqid7623erih9we8},
+and in the second case we have $K[t] \subseteq L = \Oeul$. So \eqref{lo923idewo} is true.
+It follows from \eqref{lo923idewo} that
+$$
+K[t] \subseteq \bigcap_{\Oeul \in E'} \Oeul\ =\ \Aeul,
+$$
+so in particular $t \in \Aeul = S^{-1}A$; then $t = G/s$ for 
+some $G \in A$ and $s \in S =  k[F] \setminus \{0\}$.
+Since $s \in K^*$, we have $K[t] = K[st] = K[G]$, so 
+$$
+ k(F,G) = K(G) = K(t) = L,
+$$
+showing that $F$ is a good field generator of $A$.
+\end{proof}
+
+
+
+

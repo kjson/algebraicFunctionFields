@@ -1,0 +1,73 @@
+
+\begin{proposition} \label{propaboutrationals}
+	Let $F = k(x)$ be a ration function field, where $k$ is
+	any field. Then the following hold;
+	\begin{enumerate}[(a)]
+		\item \label{isoofresidueraitonal} 
+		Let $p(x)$ be an irreducible polynomial in $k[x]$ 
+		and  $P = P_{p(x)}$ a place of $F$, then $F_P \cong k[x]/(p(x))$.
+		\item \label{intinitydegree1}The infinity place defined in example 
+		\ref{firstencounterwithpolesanddivisors} is rational.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+	\eqref{isoofresidueraitonal}: The map $f(x) \mapsto f(x) + P$ 
+	is homomorphism from $k[x]$ onto $F_P$ with kernel $(p(x))$. 
+	\eqref{intinitydegree1}: Consider the place $P_x$, corresponding
+	to the polynomial $p = x$. From \eqref{isoofresidueraitonal},
+	we know that $F_P \cong k[x]/(x)$. 
+	Hence $\deg P_x = [F_p : k] = [k[x]/(x): k] = 1$. Make the change of 
+	coordinate $t = x^{-1}$, then $P_\infty = P_t$. Hence $\deg P_\infty = 1$. 
+\end{proof}
+
+
+\begin{theorem} \label{noPlaceLikeHome}
+	There are no places of the rational function field
+	$k(x)/k$ other than the places $P_{p(x)}$ and $P_{\infty}$
+	where $p(x)$ is a monic irreducible polynomial in $k[x]$. 
+\end{theorem}
+
+\begin{proof}
+	Let $P$ be a place of $k(x)/k$. There are two cases; 
+	$x \in \OV_P$ or $x \notin \OV_P$. 
+	Suppose the former. Then $k[x] \subset \OV_P$. Let 
+	$I = k[x] \cap P$. I is a prime ideal of $k[x]$. Thus 
+	$k[x]/I$ embeds into the field $k(x)_P$ through the 
+	residue class map. Hence $I \neq 0$ by proposition 
+	\ref{propAboutValuationRings}. So there exists a 
+	\textit{uniquely determined} irreducible monic polynomial $p(x) \in k[x]$
+	such that $I = p(x)k[x]$. Every $g(x) \in k[x]$ with $p(x) \nmid g(x)$ 
+	is not in $I$, so $g(x) \notin P$ and $1/g(x) \in \OV_P$ by proposition 
+	\ref{propAboutValuationRings}. 
+	Therefore $\OV_P= \lbrace \frac{f(x)}{g(x)} \mid f(x), g(x) 
+	\in k[x] \text{ and } p(x) \nmid g(x) \rbrace \subseteq \OV_P$.
+	By theorem \ref{primeValuation}, all valuation rings 
+	are maximal proper subrings, thus $\OV_P = \OV_{p(x)}$.
+	For the second case; $x \notin \OV_P$, we must have
+	$k[x^{-1}] \in \OV_P$ because $\OV_P$ is a valuation ring.
+	So, as in case $1$, $x^{-1} \in P \cap k[x^{-1}] $ and 
+	$P\cap k[x^{-1}]= x^{-1} k[x^{1}]$. 
+	So 
+	\begin{align*}
+		\OV_P 
+		&\subseteq 
+		\lbrace 
+		\frac{f(x^{-1})}{g(x^{-1})} \mid f(x^{-1}), g(x^{-1}) \in k[x^{-1}] \text{ and } x^{-1} \nmid g(x^{-1}) 
+		\rbrace \\
+		&= 
+		\lbrace 
+		\frac{a_0 + a_1x^{-1} + ... + a_nx^{-n}}{b_0 + b_1x^{-1} + ... + b_mx^{-m}} \mid b_0 \neq 0 
+		\rbrace \\
+		&=
+		\lbrace 
+		\frac{a_0x^{n+m} + ... + a_nx^{m}}{b_0x^{n+m} + ... + b_mx^{n}} \mid b_0 \neq 0 
+		\rbrace \\
+		&=
+		\lbrace 
+		\frac{u(x)}{v(x)} \mid u(x) v(x) \in k[x] \text{ and } \deg u(x) \leq \deg v(x)
+		\rbrace  \\
+		&= \OV_\infty
+	\end{align*} 
+\end{proof}
+
