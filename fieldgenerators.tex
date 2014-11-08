@@ -26,11 +26,6 @@
 	must be a unit. Thus $z \in A$. 
 \end{proof}
 
-% \begin{lemma}
-% Let $A$ be a 
-% \end{lemma}
-
-
 \begin{example}
 	The ring $A = \Comp[x,y]/(y-x^2)$ is normal: 
 	Let $\phi : \Comp[x,y] \longrightarrow \Comp[t] $ 
@@ -103,9 +98,8 @@
 \end{proposition}
 
 \begin{proof}
-Omitted
+	Omitted
 \end{proof}
-
 
 let $ k$ be a field, $A =  k[x,y]$ the polynomial ring in 
 two variables over $ k$,
@@ -118,105 +112,105 @@ be the set of dicriticals of $F$.
 
 
 \begin{definition}
-Let $A =  k[x,y]$ be a polynomial ring in two variables 
-over a field $ k$.
-A {\it field generator\/} of $A= k[x,y]$ is an element
-$F \in A$ that satisfies:
-$\text{$ k(x,y) =  k(F,G)$ for some $G \in  k(x,y)$.}$
-If $F \in A$ satisfies the stronger condition
-$\text{$ k(x,y) =  k(F,G)$ for some $G \in  k[x,y]$}
-$ we call $F$ a {\it good\/} field generator of $A$.
-A field generator that is not good is said to be bad.
+	Let $A =  k[x,y]$ be a polynomial ring in two variables 
+	over a field $ k$.
+	A {\it field generator\/} of $A= k[x,y]$ is an element
+	$F \in A$ that satisfies:
+	$\text{$ k(x,y) =  k(F,G)$ for some $G \in  k(x,y)$.}$
+	If $F \in A$ satisfies the stronger condition
+	$\text{$ k(x,y) =  k(F,G)$ for some $G \in  k[x,y]$}
+	$ we call $F$ a {\it good\/} field generator of $A$.
+	A field generator that is not good is said to be bad.
 \end{definition}
 
 \begin{remark}
-Given any $F \in  k[x,y] \setminus  k$, we know that
-$ k(x,y) /  k(F)$ is a function field
-of one variable. Observe that $F$ is a field generator 
-of $ k[x,y]$ if and only if 
-$ k(x,y) /  k(F)$ is the rational function field.
+	Given any $F \in  k[x,y] \setminus  k$, we know that
+	$ k(x,y) /  k(F)$ is a function field
+	of one variable. Observe that $F$ is a field generator 
+	of $ k[x,y]$ if and only if 
+	$ k(x,y) /  k(F)$ is the rational function field.
 \end{remark}
 
 \begin{proposition}
-Suppose that $F$ is a field generator of $A= k[x,y]$ 
-such that $1$ occurs in the list $\Delta(F)$, then $F$ is a 
-good field generator.
+	Suppose that $F$ is a field generator of $A= k[x,y]$ 
+	such that $1$ occurs in the list $\Delta(F)$, then $F$ is a 
+	good field generator.
 \end{proposition}
 
 \begin{proof}[Proof by Daniel Daigle:]
-Let $F \in A$ be a field generator of $A$ such that 
-`$1$' occurs in $\Delta(F)$.
-Write $L =  k(x,y)$ and $K =  k(F)$, then $L/K$ is the 
-rational function field of one variable.
-Let $\VV(F)$ be the set of all valuation rings of the 
-function field $L/K$.
-Let 
-$$
-\VV^\infty(F) = \setspec{ R \in \VV(F) }{ A \nsubseteq R } = \{ R_1, \dots, R_s \}
-$$
-be the set of dicriticals of $F$. Since `$1$' occurs in
-$\Delta(F)$, one of $R_1, \dots, R_s$
-is a dicritical of degree $1$; relabelling  $R_1, \dots, R_s$ 
-if necessary, we may arrange that
-$R_1$ is a dicritical of degree $1$. Let  $P$ be the maximal 
-ideal of $R_1$; then
-$$
-\text{$P$ is a place of degree $1$ of the rational function field $L/K$.}
-$$
-Moreover, $R_1$ is the valuation ring of $P$, i.e., $R_1 = \Oeul_P$.
-By \ref{0923d091sd0192s}, there exists $t \in L$ satisfying
-$L = K(t)$, $\Oeul_P =  k[ t^{-1} ]_{(t^{-1})}$, and
-\begin{equation} \label {uqid7623erih9we8}
-K[t] = \bigcap_{\Oeul \in E} \Oeul
-\end{equation}
-where $E = \VV(F) \setminus \{ \Oeul_P \}$.
+	Let $F \in A$ be a field generator of $A$ such that 
+	`$1$' occurs in $\Delta(F)$.
+	Write $L =  k(x,y)$ and $K =  k(F)$, then $L/K$ is the 
+	rational function field of one variable.
+	Let $\VV(F)$ be the set of all valuation rings of the 
+	function field $L/K$.
+	Let 
+	$$
+	\VV^\infty(F) = \setspec{ R \in \VV(F) }{ A \nsubseteq R } = \{ R_1, \dots, R_s \}
+	$$
+	be the set of dicriticals of $F$. Since `$1$' occurs in
+	$\Delta(F)$, one of $R_1, \dots, R_s$
+	is a dicritical of degree $1$; relabelling  $R_1, \dots, R_s$ 
+	if necessary, we may arrange that
+	$R_1$ is a dicritical of degree $1$. Let  $P$ be the maximal 
+	ideal of $R_1$; then
+	$$
+	\text{$P$ is a place of degree $1$ of the rational function field $L/K$.}
+	$$
+	Moreover, $R_1$ is the valuation ring of $P$, i.e., $R_1 = \Oeul_P$.
+	By \ref{0923d091sd0192s}, there exists $t \in L$ satisfying
+	$L = K(t)$, $\Oeul_P =  k[ t^{-1} ]_{(t^{-1})}$, and
+	\begin{equation} \label {uqid7623erih9we8}
+	K[t] = \bigcap_{\Oeul \in E} \Oeul
+	\end{equation}
+	where $E = \VV(F) \setminus \{ \Oeul_P \}$.
 
-Consider the ring $\Aeul = S^{-1}A$ where $S =  k[F] \setminus \{0\} \subset A \setminus \{0\}$. 
-Then
-$$
-\text{$A$ is a UFD} \overset{\ref{i12biud012oww}}{\implies} \text{$A$ is a normal}
-\overset{\ref{poifj012woid2q9}}{\implies} \text{$\Aeul$ is a normal} .
-$$
-Since $\Frac( \Aeul ) = L$, it follows that $\Aeul$ is integrally closed in $L$. Thus, 
-by Cor.~5.22 of Atiyah-McDonald,
-$\Aeul$ is equal to the intersection of all valuation rings $\Oeul$ 
-of $L$ that satisfy $\Aeul \subseteq \Oeul$.
-\begin{equation} \label {bcdkoi23w9eje}
-\Aeul = \bigcap_{\Oeul \in E'} \Oeul
-\end{equation}
-where $E'=$ set of all valuation rings $\Oeul$ of $L$ that satisfy $\Aeul \subseteq \Oeul$.
-Note that $L \in E'$; let us prove that 
-\begin{equation} \label {h9jccnodi1ds}
-E' \subseteq E \cup \{ L \} .
-\end{equation}
-Indeed, consider $\Oeul \in E'$ such that $\Oeul \neq L$, and let us prove that  $\Oeul  \in E$.
-Since $\Oeul$ is a valuation ring of $L$ such that $\Oeul \neq L$ and
-$$
- k(F) = S^{-1}  k[F] \subseteq S^{-1}A = \Aeul \subseteq \Oeul,
-$$ 
-it follows that $\Oeul$ is a valuation ring of $L/K$, i.e., $\Oeul \in \VV(F)$. Since
-$A \subseteq \Aeul \subseteq \Oeul$, we have $\Oeul \notin \{ R_1, \dots, R_s \}$,
-so $\Oeul \in \VV(F) \setminus \{R_1\} = E$. This proves \eqref{h9jccnodi1ds}.
+	Consider the ring $\Aeul = S^{-1}A$ where $S =  k[F] \setminus \{0\} \subset A \setminus \{0\}$. 
+	Then
+	$$
+	\text{$A$ is a UFD} \overset{\ref{i12biud012oww}}{\implies} \text{$A$ is a normal}
+	\overset{\ref{poifj012woid2q9}}{\implies} \text{$\Aeul$ is a normal} .
+	$$
+	Since $\Frac( \Aeul ) = L$, it follows that $\Aeul$ is integrally closed in $L$. Thus, 
+	by Cor.~5.22 of Atiyah-McDonald,
+	$\Aeul$ is equal to the intersection of all valuation rings $\Oeul$ 
+	of $L$ that satisfy $\Aeul \subseteq \Oeul$.
+	\begin{equation} \label {bcdkoi23w9eje}
+		\Aeul = \bigcap_{\Oeul \in E'} \Oeul
+	\end{equation}
+	where $E'=$ set of all valuation rings $\Oeul$ of $L$ that satisfy $\Aeul \subseteq \Oeul$.
+	Note that $L \in E'$; let us prove that 
+	\begin{equation} \label {h9jccnodi1ds}
+		E' \subseteq E \cup \{ L \} .
+	\end{equation}
+	Indeed, consider $\Oeul \in E'$ such that $\Oeul \neq L$, and let us prove that  $\Oeul  \in E$.
+	Since $\Oeul$ is a valuation ring of $L$ such that $\Oeul \neq L$ and
+	$$
+	 k(F) = S^{-1}  k[F] \subseteq S^{-1}A = \Aeul \subseteq \Oeul,
+	$$ 
+	it follows that $\Oeul$ is a valuation ring of $L/K$, i.e., $\Oeul \in \VV(F)$. Since
+	$A \subseteq \Aeul \subseteq \Oeul$, we have $\Oeul \notin \{ R_1, \dots, R_s \}$,
+	so $\Oeul \in \VV(F) \setminus \{R_1\} = E$. This proves \eqref{h9jccnodi1ds}.
 
-It follows that
-\begin{equation} \label {lo923idewo}
-\text{for each $\Oeul \in E'$,\quad  $K[t] \subseteq \Oeul$.}
-\end{equation}
+	It follows that
+	\begin{equation} \label {lo923idewo}
+		\text{for each $\Oeul \in E'$,\quad  $K[t] \subseteq \Oeul$.}
+	\end{equation}
 
-Indeed, if $\Oeul \in E'$ then \eqref{h9jccnodi1ds} implies that $\Oeul \in E$ or $\Oeul=L$;
-in the first case we have $K[t] \subseteq \Oeul$ by \eqref{uqid7623erih9we8},
-and in the second case we have $K[t] \subseteq L = \Oeul$. So \eqref{lo923idewo} is true.
-It follows from \eqref{lo923idewo} that
-$$
-K[t] \subseteq \bigcap_{\Oeul \in E'} \Oeul\ =\ \Aeul,
-$$
-so in particular $t \in \Aeul = S^{-1}A$; then $t = G/s$ for 
-some $G \in A$ and $s \in S =  k[F] \setminus \{0\}$.
-Since $s \in K^*$, we have $K[t] = K[st] = K[G]$, so 
-$$
- k(F,G) = K(G) = K(t) = L,
-$$
-showing that $F$ is a good field generator of $A$.
+	Indeed, if $\Oeul \in E'$ then \eqref{h9jccnodi1ds} implies that $\Oeul \in E$ or $\Oeul=L$;
+	in the first case we have $K[t] \subseteq \Oeul$ by \eqref{uqid7623erih9we8},
+	and in the second case we have $K[t] \subseteq L = \Oeul$. So \eqref{lo923idewo} is true.
+	It follows from \eqref{lo923idewo} that
+	$$
+	K[t] \subseteq \bigcap_{\Oeul \in E'} \Oeul\ =\ \Aeul,
+	$$
+	so in particular $t \in \Aeul = S^{-1}A$; then $t = G/s$ for 
+	some $G \in A$ and $s \in S =  k[F] \setminus \{0\}$.
+	Since $s \in K^*$, we have $K[t] = K[st] = K[G]$, so 
+	$$
+	 k(F,G) = K(G) = K(t) = L,
+	$$
+	showing that $F$ is a good field generator of $A$.
 \end{proof}
 
 
