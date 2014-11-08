@@ -1,149 +1,149 @@
 \begin{exercise} \label{irriduciblePoverC}
-Consider the poylnomial ring $\Comp [x,y]$. Let $p =y^2 +x^3 - x \in \Comp[x,y]$ 
-and $\pi : \Comp[x,y] \longrightarrow A = \Comp[x,y]/(p)$ by defined by
-$\pi(f) = f + (p)$ for all $f \in \Comp[x,y]$. Let $F$ be the field of 
-fractions of $A$ and $\m \subset A$ be image of the prime ideal $(x,y)$ under $\pi$. 
-Show 
-\begin{enumerate}[(a)]
-\item \label{pisirreducible}$p$ is irreducible in $\Comp[x,y]$
-\item \label{basisisis} $A$ is a free $\Comp[x]$-module, with basis $\{ 1, y \}$.
-\item \label{ellipticfunctionfield} $F/ \Comp $ is a function field in one variable.
-\item \label{localizationValuation} $A_\m$ is a valution ring of the function field $F/ \Comp$.
-\end{enumerate}
+	Consider the poylnomial ring $\Comp [x,y]$. Let $p =y^2 +x^3 - x \in \Comp[x,y]$ 
+	and $\pi : \Comp[x,y] \longrightarrow A = \Comp[x,y]/(p)$ by defined by
+	$\pi(f) = f + (p)$ for all $f \in \Comp[x,y]$. Let $F$ be the field of 
+	fractions of $A$ and $\m \subset A$ be image of the prime ideal $(x,y)$ under $\pi$. 
+	Show 
+	\begin{enumerate}[(a)]
+		\item \label{pisirreducible}$p$ is irreducible in $\Comp[x,y]$
+		\item \label{basisisis} $A$ is a free $\Comp[x]$-module, with basis $\{ 1, y \}$.
+		\item \label{ellipticfunctionfield} $F/ \Comp $ is a function field in one variable.
+		\item \label{localizationValuation} $A_\m$ is a valution ring of the function field $F/ \Comp$.
+	\end{enumerate}
 \end{exercise}
 
 \begin{solution}
-\eqref{pisirreducible}: Suppose $p = gh $ for $g,h \in \C[x,y] \notzero $. 
-We may view $p$ as a polynomial in one variable $y$ over $\C[x]$. 
-Hence $deg_y(p)= deg_y(gh) = deg(g) + deg(h)$. Since $deg_y(p)=2$, 
-there are three cases for the $y$-degrees of $g$ and $h$: 
-\begin{enumerate}[(i)]
-\item $\deg_y(g) = 1$ and $\deg_y(h) = 1$ 
-\item $\deg_y(g) = 2$ and $\deg_y(h) = 0$ 
-\item $\deg_y(h) = 2$ and $\deg_y(g) = 0$
-\end{enumerate}
-Suppose $deg_y(g)=deg_y(h)=1$. 
-Write $g= a_1y + a_2$ and $h= b_1y + b_2$ where
-$a_1,a_2,b_1,b_2 \in \C[x]$. 
-Then $p = gh = (a_1y + a_2)(b_1y + b_2) = a_1b_1y^2 + (a_1b_2 + a_2b_1)y + a_2b_2 $.
-Thus we have the equations;
-\begin{align*}
-&a_1b_1 = 1  \\
-&a_1b_2 + a_2b_1 = 0 \\
-&a_2b_2 = x^3 - x 
-\end{align*} 
-$a_1b_1 = 1 \Longrightarrow a_1 = b_1^{-1}$. 
-Then $a_1b_2 + a_2b_1 = 0$ becomes
-$b_2=- b_1^2a_2$. Then in $a_2b_2 = x^3 - x $ we have
-$a_2b_2 = - a_2^2b_1^2 = - (a_2b_1)^2 = x^3 - x$ which is 
-impossible since $x^3 - x = x(x-1)(x+1)$ is not a 
-square. So either $f$ or $g$ is a unit. 
-If $\deg_y(g) = 2$ and $\deg_y(h) = 0$, then we 
-may write $g = a_1y^2 + a_2y + a_3$ and $h = b$ for some 
-$a_1,a_2,a_3,b \in \Comp[x]$. 
-Then $$y^2 +x^3 - x = g = a_1by^2 + a_2by + a_3b$$
-This would mean that $a_1b= 1$. Hence $b \in \Comp[x]^* $.
-So $b$ must be a unit of $\Comp[x,y]$ as well. For the last
-case (where $\deg_y(h) = 2$ and $\deg_y(g) = 0$), the same 
-argument will show that $g \in \Comp[x,y]^*$.
-Thus $p$ is irreducibe in $\C[x,y]$.  \\
+	\eqref{pisirreducible}: Suppose $p = gh $ for $g,h \in \C[x,y] \notzero $. 
+	We may view $p$ as a polynomial in one variable $y$ over $\C[x]$. 
+	Hence $deg_y(p)= deg_y(gh) = deg(g) + deg(h)$. Since $deg_y(p)=2$, 
+	there are three cases for the $y$-degrees of $g$ and $h$: 
+	\begin{enumerate}[(i)]
+		\item $\deg_y(g) = 1$ and $\deg_y(h) = 1$ 
+		\item $\deg_y(g) = 2$ and $\deg_y(h) = 0$ 
+		\item $\deg_y(h) = 2$ and $\deg_y(g) = 0$
+	\end{enumerate}
+	Suppose $deg_y(g)=deg_y(h)=1$. 
+	Write $g= a_1y + a_2$ and $h= b_1y + b_2$ where
+	$a_1,a_2,b_1,b_2 \in \C[x]$. 
+	Then $p = gh = (a_1y + a_2)(b_1y + b_2) = a_1b_1y^2 + (a_1b_2 + a_2b_1)y + a_2b_2 $.
+	Thus we have the equations;
+	\begin{align*}
+	&a_1b_1 = 1  \\
+	&a_1b_2 + a_2b_1 = 0 \\
+	&a_2b_2 = x^3 - x 
+	\end{align*} 
+	$a_1b_1 = 1 \Longrightarrow a_1 = b_1^{-1}$. 
+	Then $a_1b_2 + a_2b_1 = 0$ becomes
+	$b_2=- b_1^2a_2$. Then in $a_2b_2 = x^3 - x $ we have
+	$a_2b_2 = - a_2^2b_1^2 = - (a_2b_1)^2 = x^3 - x$ which is 
+	impossible since $x^3 - x = x(x-1)(x+1)$ is not a 
+	square. So either $f$ or $g$ is a unit. 
+	If $\deg_y(g) = 2$ and $\deg_y(h) = 0$, then we 
+	may write $g = a_1y^2 + a_2y + a_3$ and $h = b$ for some 
+	$a_1,a_2,a_3,b \in \Comp[x]$. 
+	Then $$y^2 +x^3 - x = g = a_1by^2 + a_2by + a_3b$$
+	This would mean that $a_1b= 1$. Hence $b \in \Comp[x]^* $.
+	So $b$ must be a unit of $\Comp[x,y]$ as well. For the last
+	case (where $\deg_y(h) = 2$ and $\deg_y(g) = 0$), the same 
+	argument will show that $g \in \Comp[x,y]^*$.
+	Thus $p$ is irreducibe in $\C[x,y]$.  \\
 
-\eqref{basisisis}: Suppose $a+by = 0$ for nonzero $a,b \in \Comp[x]$. 
-Recall the ``re-definition'' $x = \pi(x)$ and $y = \pi(y)$. To 
-avoid confusion, let $X,Y$ be used to represent variables in 
-$\Comp[X,Y]$ and $x,y$ be used to represent variables in $A$. 
-Then $a+bY \in \text{ker}(\pi) = (p)$ - but this is impossible since 
-$\deg_Y(p) = 2 \geq deg_Y(a+bY) = 1$. This means that $\lbrace 1,y \rbrace$
-is an independent set in $A$. Clearly $\text{span} \lbrace 1,y \rbrace \subseteq A$.
-Let $f \in A$. Then $$f = a_0 + a_ 1x + a_2y + a_3xy + a_4 x^2 
-+ a_5y^2 + a_6x^2y + a_7xy^2 + a_8x^2y^2 + ... + a_nx^ny^m$$
-for some $a_0,a_1,...,a_n \in \Comp$ where $y^2+x^3 - x = 0$. 
-In each term of $f$ divisible by $y^2$, substitute $y^2$ with $x - x^3$. 
-Then $$f = ... + a_3xy + a_4 x^2 + a_5(x - x^3) + a_6x^2y + a_7x(x - x^3) 
-+ a_8x^2(x - x^3) + ... + a_nx^n(x - x^3)^ky^l$$
-where $k = m/2, l = 0$ if $m$ is even and $k = (m-1)/2, l = 1$ if $m$ is odd.
-Factoring out the $y$ in some of terms, we may rearrange $f$ as;
-$$f =  a_0 + a_ 1x +  a_4 x^2  + a_5(x - x^3)  + a_7x(x - x^3) + ... + 
-(a_2 +  a_3x  + a_6x^2 + ... +a_nx^n(x - x^3)^k)y $$
-Hence $f \in \text{span}_{\Comp[x]} \lbrace 1,y \rbrace$. 
-So $A$ is a free $\Comp[x]$-module, with basis $\{ 1, y \}$.\\
+	\eqref{basisisis}: Suppose $a+by = 0$ for nonzero $a,b \in \Comp[x]$. 
+	Recall the ``re-definition'' $x = \pi(x)$ and $y = \pi(y)$. To 
+	avoid confusion, let $X,Y$ be used to represent variables in 
+	$\Comp[X,Y]$ and $x,y$ be used to represent variables in $A$. 
+	Then $a+bY \in \text{ker}(\pi) = (p)$ - but this is impossible since 
+	$\deg_Y(p) = 2 \geq deg_Y(a+bY) = 1$. This means that $\lbrace 1,y \rbrace$
+	is an independent set in $A$. Clearly $\text{span} \lbrace 1,y \rbrace \subseteq A$.
+	Let $f \in A$. Then $$f = a_0 + a_ 1x + a_2y + a_3xy + a_4 x^2 
+	+ a_5y^2 + a_6x^2y + a_7xy^2 + a_8x^2y^2 + ... + a_nx^ny^m$$
+	for some $a_0,a_1,...,a_n \in \Comp$ where $y^2+x^3 - x = 0$. 
+	In each term of $f$ divisible by $y^2$, substitute $y^2$ with $x - x^3$. 
+	Then $$f = ... + a_3xy + a_4 x^2 + a_5(x - x^3) + a_6x^2y + a_7x(x - x^3) 
+	+ a_8x^2(x - x^3) + ... + a_nx^n(x - x^3)^ky^l$$
+	where $k = m/2, l = 0$ if $m$ is even and $k = (m-1)/2, l = 1$ if $m$ is odd.
+	Factoring out the $y$ in some of terms, we may rearrange $f$ as;
+	$$f =  a_0 + a_ 1x +  a_4 x^2  + a_5(x - x^3)  + a_7x(x - x^3) + ... + 
+	(a_2 +  a_3x  + a_6x^2 + ... +a_nx^n(x - x^3)^k)y $$
+	Hence $f \in \text{span}_{\Comp[x]} \lbrace 1,y \rbrace$. 
+	So $A$ is a free $\Comp[x]$-module, with basis $\{ 1, y \}$.\\
 
-\eqref{ellipticfunctionfield}: Since $\Comp \cap (p) = \lbrace 0 \rbrace $, 
-the composition of the cannonical projection map
-of the quotient ring $A$ with the inclusion homomorphism $f \mapsto f/1 $ of 
-$A$ to $F$ embeds $\Comp $ in $F$. So we may view $\Comp $ as a subfield of
-$F$. To show that $F/ \Comp$ is a transcendental extension of 
-fields, condsider $y\in F$. Suppose $y$ is algebraic over 
-$\Comp $, then $a_0 + a_1y + ... + a_ny^n \in (p)$ 
-for some $a_0,...,a_n \in \Comp$. That would mean 
-that $a_0 + a_1y + ... + a_ny^n = g(x,y)(p) = g(x,y)(y^2 + x - x)$ 
-for some nonzero $g(x,y) \in \Comp[x,y]$.
-But $\deg_x(a_0 + a_1y + ... + a_ny^n) = 0$ and 
-$\deg_x (y^2 +x^3 -x) = 3$. So there does not exists such a $g$.
-Hence $y$ is transcendental over $\Comp$.
-We want to show that $F/\Comp(x)$ is finite.
-Let $0 \neq z \in F$. Write $z = f/g$ for $f,g\in A$ with $g \neq 0$.
-By \eqref{basisisis}, we may write $f = a + by$ for 
-$a,b \in \Comp[x]$. 
-Since $0 \neq z$, we may assume $a\neq 0$ or  $b \neq 0$. 
-\textit{Claim}: If $m(T) \in \Comp(x) [T] \backslash \lbrace 0 \rbrace$ is 
-some polynomial satisfying $m(f) = 0$. Then we may find another 
-nonzero polynomail $m^{\prime}(T)$, that depends on $g$, such 
-that $m(z) = 0$. \\
+	\eqref{ellipticfunctionfield}: Since $\Comp \cap (p) = \lbrace 0 \rbrace $, 
+	the composition of the cannonical projection map
+	of the quotient ring $A$ with the inclusion homomorphism $f \mapsto f/1 $ of 
+	$A$ to $F$ embeds $\Comp $ in $F$. So we may view $\Comp $ as a subfield of
+	$F$. To show that $F/ \Comp$ is a transcendental extension of 
+	fields, condsider $y\in F$. Suppose $y$ is algebraic over 
+	$\Comp $, then $a_0 + a_1y + ... + a_ny^n \in (p)$ 
+	for some $a_0,...,a_n \in \Comp$. That would mean 
+	that $a_0 + a_1y + ... + a_ny^n = g(x,y)(p) = g(x,y)(y^2 + x - x)$ 
+	for some nonzero $g(x,y) \in \Comp[x,y]$.
+	But $\deg_x(a_0 + a_1y + ... + a_ny^n) = 0$ and 
+	$\deg_x (y^2 +x^3 -x) = 3$. So there does not exists such a $g$.
+	Hence $y$ is transcendental over $\Comp$.
+	We want to show that $F/\Comp(x)$ is finite.
+	Let $0 \neq z \in F$. Write $z = f/g$ for $f,g\in A$ with $g \neq 0$.
+	By \eqref{basisisis}, we may write $f = a + by$ for 
+	$a,b \in \Comp[x]$. 
+	Since $0 \neq z$, we may assume $a\neq 0$ or  $b \neq 0$. 
+	\textit{Claim}: If $m(T) \in \Comp(x) [T] \backslash \lbrace 0 \rbrace$ is 
+	some polynomial satisfying $m(f) = 0$. Then we may find another 
+	nonzero polynomail $m^{\prime}(T)$, that depends on $g$, such 
+	that $m(z) = 0$. \\
 
-Proof of claim:
-Assume there exists a nonzero polynomial $m(T) \in \Comp(x)[T]$ 
-such that $m(f) = 0$. Write $m(T) = a_0 + a_1T + ... + a_nT^n$ 
-for $a_1,...,a_n \in \Comp(x)$. Consider the terms in the polynomial $g$.
-Write $g(x,y) = \sum_{i,j\in \Nat } b_{ij} x^iy^j$. 
-If each term of $g$ is either in $\Comp(x)$ or divisible by $y^2$,
-then we may multiply $m(T)$ by $h(x) = (\sum_{i,j\in \Nat } b_{ij} x^i(x-x^3)^j)^n$
-Then all the denominators of $m(z)$ will be cleared by $h(x)$, which 
-belongs to $\Comp(x)$. So if we define $m^{\prime}(T) = h(x)m(T)$,
-then $m^{\prime} (z) = 0$. Alternatively, suppose any of the terms
-of $g$ are of the form $uy^n$ for $u\in \Comp(x)$ and $n$ odd.
-We may assume that only one of the terms of $g$ is of this form 
-and that $n = 1$: If more of the terms are of this form then 
-repeat the following process again. 
-The case $n > 1 $, follows by induction. So we may write
-$g = a + by$ for some $a,b \in \Comp(x)$. let $h(x) = (a^2 - b^2(x-x^3)^2)^n$ and 
-let $m^{\prime}(T) = h(x)m(T)$. 
-Thus
-\begin{align*}
-m^{\prime}(z) &= (a^2 - b^2(x-x^3)^2)^n(a_0 + a_1(\frac{f}{a+by}) + ... + a_n(\frac{f}{a+by})^n) \\
-&= (a+by)^n(a-by)^n (a_0 + a_1(\frac{f}{a+by}) + ... + a_n(\frac{f^n}{(a+by)^n})) \\
-&= (a+by)^n(a-by)^na_0 + a_1(a+by)^{n-1}(a-by)^nf + ... + a_nf^n(a-by)^n \\
-&= 0  
-\end{align*}
+	Proof of claim:
+	Assume there exists a nonzero polynomial $m(T) \in \Comp(x)[T]$ 
+	such that $m(f) = 0$. Write $m(T) = a_0 + a_1T + ... + a_nT^n$ 
+	for $a_1,...,a_n \in \Comp(x)$. Consider the terms in the polynomial $g$.
+	Write $g(x,y) = \sum_{i,j\in \Nat } b_{ij} x^iy^j$. 
+	If each term of $g$ is either in $\Comp(x)$ or divisible by $y^2$,
+	then we may multiply $m(T)$ by $h(x) = (\sum_{i,j\in \Nat } b_{ij} x^i(x-x^3)^j)^n$
+	Then all the denominators of $m(z)$ will be cleared by $h(x)$, which 
+	belongs to $\Comp(x)$. So if we define $m^{\prime}(T) = h(x)m(T)$,
+	then $m^{\prime} (z) = 0$. Alternatively, suppose any of the terms
+	of $g$ are of the form $uy^n$ for $u\in \Comp(x)$ and $n$ odd.
+	We may assume that only one of the terms of $g$ is of this form 
+	and that $n = 1$: If more of the terms are of this form then 
+	repeat the following process again. 
+	The case $n > 1 $, follows by induction. So we may write
+	$g = a + by$ for some $a,b \in \Comp(x)$. let $h(x) = (a^2 - b^2(x-x^3)^2)^n$ and 
+	let $m^{\prime}(T) = h(x)m(T)$. 
+	Thus
+	\begin{align*}
+	m^{\prime}(z) &= (a^2 - b^2(x-x^3)^2)^n(a_0 + a_1(\frac{f}{a+by}) + ... + a_n(\frac{f}{a+by})^n) \\
+	&= (a+by)^n(a-by)^n (a_0 + a_1(\frac{f}{a+by}) + ... + a_n(\frac{f^n}{(a+by)^n})) \\
+	&= (a+by)^n(a-by)^na_0 + a_1(a+by)^{n-1}(a-by)^nf + ... + a_nf^n(a-by)^n \\
+	&= 0  
+	\end{align*}
 
-So it suffices to find a nonzero polynomial $m(T) \in \Comp (x)[T]$
-such that $m(f) = 0$. Let $m(T) = (T-a)^{2} - b^2(x-x^3)$. Then 
-clearly $m(a+by) = (a+by - a)^2 - b^2y^2 = 0$. Since $a \neq 0 $ 
-or $b \neq 0$, it follows that $m(T)$ is nonzero. Hence
-$F/\Comp(x)$ is finite. Thus $F/\Comp$ is a function field \\
+	So it suffices to find a nonzero polynomial $m(T) \in \Comp (x)[T]$
+	such that $m(f) = 0$. Let $m(T) = (T-a)^{2} - b^2(x-x^3)$. Then 
+	clearly $m(a+by) = (a+by - a)^2 - b^2y^2 = 0$. Since $a \neq 0 $ 
+	or $b \neq 0$, it follows that $m(T)$ is nonzero. Hence
+	$F/\Comp(x)$ is finite. Thus $F/\Comp$ is a function field \\
 
-\eqref{localizationValuation}: By definition, 
-$A_\m = \lbrace f/g \mid f,g \in A , g \neq 0 \text{ and } g \notin \m \rbrace $.
-So $\Comp \subsetneqq A_\m \subsetneqq F$ is clear. Let $z \in F$. 
-Write $z = f/g$ for $f,g \in A$ and $g \neq 0$. Suppose $f,g \in \m$. 
-Then we may write $f = ax+by,g = cx + dy$ for $a,b,c,d \in \C[x,y]$.
-Thus
-\begin{align*}
-z &= f/g \\
-&= \frac{ax+by}{cx + dy} \\
-&= \frac{(ax+by)(cx - dy)}{(cx + dy)(cx - dy)} \\
-&= \frac{acx^2 + (cb-ad)xy - bdy^2}{c^2x^2 -d^2y^2} \\
-&= \frac{acx^2 + (cb-ad)xy - bd(x-x^3)}{c^2x^2 -d^2(x-x^3)} \\
-&= \frac{acx + (cb-ad)y - bd(1-x^2)}{c^2x -d^2(1-x^2)} \\
-&= \frac{acx + (cb-ad)y - bd + bdx^2}{c^2x -d^2 + d^2x^2} 
-\end{align*}
+	\eqref{localizationValuation}: By definition, 
+	$A_\m = \lbrace f/g \mid f,g \in A , g \neq 0 \text{ and } g \notin \m \rbrace $.
+	So $\Comp \subsetneqq A_\m \subsetneqq F$ is clear. Let $z \in F$. 
+	Write $z = f/g$ for $f,g \in A$ and $g \neq 0$. Suppose $f,g \in \m$. 
+	Then we may write $f = ax+by,g = cx + dy$ for $a,b,c,d \in \C[x,y]$.
+	Thus
+	\begin{align*}
+	z &= f/g \\
+	&= \frac{ax+by}{cx + dy} \\
+	&= \frac{(ax+by)(cx - dy)}{(cx + dy)(cx - dy)} \\
+	&= \frac{acx^2 + (cb-ad)xy - bdy^2}{c^2x^2 -d^2y^2} \\
+	&= \frac{acx^2 + (cb-ad)xy - bd(x-x^3)}{c^2x^2 -d^2(x-x^3)} \\
+	&= \frac{acx + (cb-ad)y - bd(1-x^2)}{c^2x -d^2(1-x^2)} \\
+	&= \frac{acx + (cb-ad)y - bd + bdx^2}{c^2x -d^2 + d^2x^2} 
+	\end{align*}
 
-Notice, if $b\neq 0, d \neq 0$, then both the numerator and denominator 
-do not belong to
-$\m$ since $\m \cap \Comp = \lbrace 0 \rbrace$. So $z \in A_\m^*$.
-If $d = 0$ then $z = a/c$. If both $a,c\in \m$, then we
-may repeat the same process again. If both $b = 0$ and $d \neq 0$. 
-Then only $z \in A_\m^*$. Thus $A_\m $ is a valuation ring of $F$.
+	Notice, if $b\neq 0, d \neq 0$, then both the numerator and denominator 
+	do not belong to
+	$\m$ since $\m \cap \Comp = \lbrace 0 \rbrace$. So $z \in A_\m^*$.
+	If $d = 0$ then $z = a/c$. If both $a,c\in \m$, then we
+	may repeat the same process again. If both $b = 0$ and $d \neq 0$. 
+	Then only $z \in A_\m^*$. Thus $A_\m $ is a valuation ring of $F$.
 \end{solution}
 
 \begin{exercise} \label{primeontoprime}
