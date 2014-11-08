@@ -1,7 +1,5 @@
 \begin{lemma} \label {i9283hd01bxdo912ep01}
-	Let $E/k$ be a field extension and $u,v \in E$.  
-	Then we have field extensions:
-	$$
+	Let $E/k$ be a field extension and $u,v \in E$. Then we have field extensions: $$
 	\xymatrix@R=0pt@C=6pt{
 	& E  \\
 	\\
@@ -20,78 +18,78 @@
 \end{lemma}
 
 \begin{proof}
-$\eqref{con1}  \Longrightarrow \eqref{con2} $ Assume $(u,v)$ 
-are algebraically dependent over $k$. Then there 
-exists $$ f(X,Y) = \sum_{i,j \in \N} a_{ij} X^iY^j \in 
-k[X,Y] \backslash \lbrace 0 \rbrace $$ such that
-$f(u,v) = \sum_{i,j \in \N} a_{ij} u^iv^j = 0 $. 
-Consider $$g(Y) = \sum_{i,j \in \N} a_{ij} u^iY^j 
-\in k[u][Y] \backslash \lbrace 0 \rbrace $$ We still 
-have $g(v) = \sum_{i,j} a_{ij} u^iv^j = 0 $. 
-Hence $v$ is algebraic over $k[u] \subset k(u)$. 
+	$\eqref{con1}  \Longrightarrow \eqref{con2} $ Assume $(u,v)$ 
+	are algebraically dependent over $k$. Then there 
+	exists $$ f(X,Y) = \sum_{i,j \in \N} a_{ij} X^iY^j \in 
+	k[X,Y] \backslash \lbrace 0 \rbrace $$ such that
+	$f(u,v) = \sum_{i,j \in \N} a_{ij} u^iv^j = 0 $. 
+	Consider $$g(Y) = \sum_{i,j \in \N} a_{ij} u^iY^j 
+	\in k[u][Y] \backslash \lbrace 0 \rbrace $$ We still 
+	have $g(v) = \sum_{i,j} a_{ij} u^iv^j = 0 $. 
+	Hence $v$ is algebraic over $k[u] \subset k(u)$. 
 
 
-$\eqref{con2} \Longrightarrow \eqref{con3} $; Assume $v$ is 
-algebraic over $k(u)$. Then there exists
-$$ f(Y) = \sum_{i\in \N} a_i(u)Y^i \in k(u)[Y] \backslash \lbrace 0 \rbrace $$ 
-such that $f(v) = 0$. Since $a_i(u) \in k(u)$ for 
-all $i$, $a_i(u) = \frac{f_i(u)}{g_i(u)} $ 
-where $f_i(u),g_i(u) \in k[u]$ and $g_i(u) \neq 0 $. 
-Let $$a(u) := \prod_i g_i(u) \in k[u] \backslash \lbrace 0 \rbrace $$ 
-Then consider $$ g(Y) := a(u)f(Y) = a(u)\sum_{i\in \N}
-a_i(u)Y^i = \sum_{i \in \N}a(u) a_i(u)Y^i $$ 
-Note that $h_i(u):=a(u)a_i(u) \in k[u] $ for all $i$ 
-and we still have $g(v) = 0 $. We can rewrite $g(Y)$ 
-as $$ g(X) = \sum_{i \in \N} h_i(X)v^i \in k[v][X] \backslash \lbrace 0 \rbrace $$ 
-and we still have  $g(u) = \sum_{i \in \N} h_i(u) v^i = 0 $. 
-Hence $u$ is algebraic over $k[v] \subset k(v)$ 
+	$\eqref{con2} \Longrightarrow \eqref{con3} $; Assume $v$ is 
+	algebraic over $k(u)$. Then there exists
+	$$ f(Y) = \sum_{i\in \N} a_i(u)Y^i \in k(u)[Y] \backslash \lbrace 0 \rbrace $$ 
+	such that $f(v) = 0$. Since $a_i(u) \in k(u)$ for 
+	all $i$, $a_i(u) = \frac{f_i(u)}{g_i(u)} $ 
+	where $f_i(u),g_i(u) \in k[u]$ and $g_i(u) \neq 0 $. 
+	Let $$a(u) := \prod_i g_i(u) \in k[u] \backslash \lbrace 0 \rbrace $$ 
+	Then consider $$ g(Y) := a(u)f(Y) = a(u)\sum_{i\in \N}
+	a_i(u)Y^i = \sum_{i \in \N}a(u) a_i(u)Y^i $$ 
+	Note that $h_i(u):=a(u)a_i(u) \in k[u] $ for all $i$ 
+	and we still have $g(v) = 0 $. We can rewrite $g(Y)$ 
+	as $$ g(X) = \sum_{i \in \N} h_i(X)v^i \in k[v][X] \backslash \lbrace 0 \rbrace $$ 
+	and we still have  $g(u) = \sum_{i \in \N} h_i(u) v^i = 0 $. 
+	Hence $u$ is algebraic over $k[v] \subset k(v)$ 
 
-$\eqref{con3} \Longrightarrow \eqref{con1}$; 
-Assume $u$ is algebraic over $k(v)$. Then there 
-exists $$ f(X) = \sum_{i \in \N } a_i(v)X^i \in k(v)[X] 
-\backslash \lbrace 0 \rbrace $$ such that $f(u) = 0$. 
-Since $a_i(v) \in k(v) $ for all $i$, $a_i(v)= \frac{f_i(v)}{g_i(v)}$ 
-where $f_i(v),g_i(v) \in k[Y]$ and $g_i(v) \neq 0 $. 
-Let $$a(v) := \prod_i g_i(v) \in k[v] \backslash \lbrace 0 \rbrace  $$ 
-Then consider $$ g(X) = a(v)f(X) = a(v)\sum_{i \in \N} a_i(v)X^i 
-= \sum_{i \in \N} a(v)a_i(v)X^i $$ Note that
-$h_i(v):=a(v)a_i(v) \in k[v] $ for all $i$ and we still 
-have $g(u) = 0 $. We can rewrite $g(Y)$ as
-$$ g(X,Y) = \sum_{i \in \N} h_i(Y)X^i \in k[X,Y] 
-\backslash \lbrace 0 \rbrace  $$ We still have
-$g(X,Y) = \sum_{i \in \N} h_i(v) u^i = 0 $. 
-Hence $(u,v)$ is algebraically independent over $k$.
+	$\eqref{con3} \Longrightarrow \eqref{con1}$; 
+	Assume $u$ is algebraic over $k(v)$. Then there 
+	exists $$ f(X) = \sum_{i \in \N } a_i(v)X^i \in k(v)[X] 
+	\backslash \lbrace 0 \rbrace $$ such that $f(u) = 0$. 
+	Since $a_i(v) \in k(v) $ for all $i$, $a_i(v)= \frac{f_i(v)}{g_i(v)}$ 
+	where $f_i(v),g_i(v) \in k[Y]$ and $g_i(v) \neq 0 $. 
+	Let $$a(v) := \prod_i g_i(v) \in k[v] \backslash \lbrace 0 \rbrace  $$ 
+	Then consider $$ g(X) = a(v)f(X) = a(v)\sum_{i \in \N} a_i(v)X^i 
+	= \sum_{i \in \N} a(v)a_i(v)X^i $$ Note that
+	$h_i(v):=a(v)a_i(v) \in k[v] $ for all $i$ and we still 
+	have $g(u) = 0 $. We can rewrite $g(Y)$ as
+	$$ g(X,Y) = \sum_{i \in \N} h_i(Y)X^i \in k[X,Y] 
+	\backslash \lbrace 0 \rbrace  $$ We still have
+	$g(X,Y) = \sum_{i \in \N} h_i(v) u^i = 0 $. 
+	Hence $(u,v)$ is algebraically independent over $k$.
 \end{proof}
 
 \begin{lemma} \label {z0cb9182wbxi81f6}
-Let $k$ be a field and let $k(x_1, \dots, x_n)$ be 
-the field of fractions of the
-polynomial ring  $k[x_1, \dots, x_n]$ in $n$ variables 
-over $k$ (where $n \ge 1$).
-Then $k$ is algebraically closed in $k(x_1, \dots, x_n)$.
+	Let $k$ be a field and let $k(x_1, \dots, x_n)$ be 
+	the field of fractions of the
+	polynomial ring  $k[x_1, \dots, x_n]$ in $n$ variables 
+	over $k$ (where $n \ge 1$).
+	Then $k$ is algebraically closed in $k(x_1, \dots, x_n)$.
 \end{lemma}
 
 \begin{proof}
-Induction on $n$. When $n= 1$, then we are considering 
-the rational function field in one variable over $k $.
-Let $P$ be a place of $k(x)/k$ of degree $1$. That is
-$P:=P_{x-a}$ for $a \in k$. The algebraic closure of 
-$k$, denoted $\tilde{k}$, embeds into $k(x)_P$, since 
-$P \cap \tilde{k} = \lbrace 0 \rbrace$. Then we have 
-$k \subseteq \tilde{k} \subseteq k(x)_P = k$. 
-Hence $k$ is algebraically closed in $k(x)$. 
-Assume that $n>1$.
-Inductive hypothesis: $k$ is algebraically closed 
-in $k(x_1, \dots, x_{n-1})$.
-To prove that $k$ is algebraically closed in $k(x_1, \dots, x_n)$, we consider
-an element $w$ of $k(x_1, \dots, x_n)$ that is algebraic 
-over $k$. We have to show that $w \in k$.
-Observe that $w$ is algebraic over $k(x_1, \dots, x_{n-1})$.
-Write $F = k(x_1, \dots, x_{n})$ and $K = k(x_1, \dots, x_{n-1})$.
-Then $F/K$ is the rational function field of one variable, 
-so $K$ is algebraically closed in $F$, so $w \in K$.
-As $w \in k(x_1, \dots, x_{n-1})$ is algebraic over $k$, 
-the inductive hypothesis implies that $w \in k$.
+	Induction on $n$. When $n= 1$, then we are considering 
+	the rational function field in one variable over $k $.
+	Let $P$ be a place of $k(x)/k$ of degree $1$. That is
+	$P:=P_{x-a}$ for $a \in k$. The algebraic closure of 
+	$k$, denoted $\tilde{k}$, embeds into $k(x)_P$, since 
+	$P \cap \tilde{k} = \lbrace 0 \rbrace$. Then we have 
+	$k \subseteq \tilde{k} \subseteq k(x)_P = k$. 
+	Hence $k$ is algebraically closed in $k(x)$. 
+	Assume that $n>1$.
+	Inductive hypothesis: $k$ is algebraically closed 
+	in $k(x_1, \dots, x_{n-1})$.
+	To prove that $k$ is algebraically closed in $k(x_1, \dots, x_n)$, we consider
+	an element $w$ of $k(x_1, \dots, x_n)$ that is algebraic 
+	over $k$. We have to show that $w \in k$.
+	Observe that $w$ is algebraic over $k(x_1, \dots, x_{n-1})$.
+	Write $F = k(x_1, \dots, x_{n})$ and $K = k(x_1, \dots, x_{n-1})$.
+	Then $F/K$ is the rational function field of one variable, 
+	so $K$ is algebraically closed in $F$, so $w \in K$.
+	As $w \in k(x_1, \dots, x_{n-1})$ is algebraic over $k$, 
+	the inductive hypothesis implies that $w \in k$.
 \end{proof}
 
 
@@ -112,189 +110,183 @@ of one variable.
 There are several steps in the proof of this.
 
 \begin{remark}
-By lemma~\ref{z0cb9182wbxi81f6}, $ k$ is algebraically closed in $L$.
-However, whether or not $K$ is algebraically closed in $L$ depends on the choice of $F$.
-For instance, if $F=x$ then $L/K$ is the rational function field of one variable, so $K$ is algebraically closed 
-in $L$ in this case.  But if $F = x^2$ then $x$ is an element of $L$ that is algebraic over $K$ but that does not 
-belong to $K$, so $K$ is not algebraically closed in $L$ in this case.
+	By lemma~\ref{z0cb9182wbxi81f6}, $ k$ is algebraically closed in $L$.
+	However, whether or not $K$ is algebraically closed in $L$ depends on the choice of $F$.
+	For instance, if $F=x$ then $L/K$ is the rational function field of one variable, so $K$ is algebraically closed 
+	in $L$ in this case.  But if $F = x^2$ then $x$ is an element of $L$ that is algebraic over $K$ but that does not 
+	belong to $K$, so $K$ is not algebraically closed in $L$ in this case.
 \end{remark}
 
 \begin{proposition} \label {90cdk2938db129}
-Show that the following are equivalent:
-\begin{enumerate}[(i)]
-\item \label{fact1} $(F,x)$ is algebraically dependent over $ k$;
-\item \label{fact2} $x$ is algebraic over $K$;
-\item \label{fact3} $F$ is algebraic over $ k(x)$;
-\item \label{fact4} $F \in  k(x)$;
-\item \label{fact5} $F \in  k[x]$.
-\end{enumerate}
+	Show that the following are equivalent:
+	\begin{enumerate}[(i)]
+	\item \label{fact1} $(F,x)$ is algebraically dependent over $ k$;
+	\item \label{fact2} $x$ is algebraic over $K$;
+	\item \label{fact3} $F$ is algebraic over $ k(x)$;
+	\item \label{fact4} $F \in  k(x)$;
+	\item \label{fact5} $F \in  k[x]$.
+	\end{enumerate}
 \end{proposition}
 
 \begin{proof}
-Since $A$ is a polynomial ring in two variables $x,y$, by definition $(x,y)$ 
-is algebraically independent over $ k$, so we have that $x$ is transcendental 
-over $ k$. Suppose $F$ is algebraic over $ k$, 
-then $F \in  k$ by \ref{z0cb9182wbxi81f6}, 
-and this contradicts the hypothesis $F \in A \setminus k$.
-Therefore we may use lemma \ref{i9283hd01bxdo912ep01} 
-to show that \ref{fact1}, \ref{fact2} and \ref{fact3} are all equivalent.
-(\eqref{fact3} $\Rightarrow $ \eqref{fact4}): 
-Since $L/ k(x)$ is the rational function field 
-in one variable, it follows that $ k(x)$ is algebraically closed
-in $L$.
-(\eqref{fact4} $\Rightarrow $ \eqref{fact5}): 
-$ F \in  k[x,y] \backslash  k$ by definition. 
-Hence if $F\in  k(x) $. We want to show that 
-$ k(x) \cap  k[x,y] =  k[x]$. 
-It is clear that $ k[x] \subseteq k(x) \cap  k[x,y]$.
-Consider an element $\xi \in  k(x) \cap  k[x,y]$.
-Since $\xi \in  k(x)$, we may write $\xi = fg^{-1}$ for
-$f,g\in  k[x]$ and $g \neq 0$. Thus $g \in  k[x,y]$. 
-So $g$ must belong to $\Comp$. Hence $ k(x) \cap  k[x,y] =  k[x]$.
-
-
-
-(\eqref{fact5} $\Rightarrow $ \eqref{fact3}):
-If $F \in  k[x]$, then $F$ is algebraic over $ k[x] \subset  k(x)$.
+	Since $A$ is a polynomial ring in two variables $x,y$, by definition $(x,y)$ 
+	is algebraically independent over $ k$, so we have that $x$ is transcendental 
+	over $ k$. Suppose $F$ is algebraic over $ k$, 
+	then $F \in  k$ by \ref{z0cb9182wbxi81f6}, 
+	and this contradicts the hypothesis $F \in A \setminus k$.
+	Therefore we may use lemma \ref{i9283hd01bxdo912ep01} 
+	to show that \ref{fact1}, \ref{fact2} and \ref{fact3} are all equivalent.
+	(\eqref{fact3} $\Rightarrow $ \eqref{fact4}): 
+	Since $L/ k(x)$ is the rational function field 
+	in one variable, it follows that $ k(x)$ is algebraically closed
+	in $L$.
+	(\eqref{fact4} $\Rightarrow $ \eqref{fact5}): 
+	$ F \in  k[x,y] \backslash  k$ by definition. 
+	Hence if $F\in  k(x) $. We want to show that 
+	$ k(x) \cap  k[x,y] =  k[x]$. 
+	It is clear that $ k[x] \subseteq k(x) \cap  k[x,y]$.
+	Consider an element $\xi \in  k(x) \cap  k[x,y]$.
+	Since $\xi \in  k(x)$, we may write $\xi = fg^{-1}$ for
+	$f,g\in  k[x]$ and $g \neq 0$. Thus $g \in  k[x,y]$. 
+	So $g$ must belong to $\Comp$. Hence $ k(x) \cap  k[x,y] =  k[x]$.
+	(\eqref{fact5} $\Rightarrow $ \eqref{fact3}):
+	If $F \in  k[x]$, then $F$ is algebraic over $ k[x] \subset  k(x)$.
 \end{proof}
 
 
 \begin{remark}
-The result of proposition \ref{90cdk2938db129} remains valid 
-if one replaces all `$x$' by `$y$' in the statement.
-In particular, if $y$ is algebraic over $K$ then $F \in  k[y]$.
+	The result of proposition \ref{90cdk2938db129} remains valid 
+	if one replaces all `$x$' by `$y$' in the statement.
+	In particular, if $y$ is algebraic over $K$ then $F \in  k[y]$.
 \end{remark}
 
 \begin{corollary} \label {9fo13d912o9o0}
-At least one of $x,y$ is transcendental over $K$.
+	At least one of $x,y$ is transcendental over $K$.
 \end{corollary}
 
 \begin{proof}
-Let $F \in A \backslash  k$. Then if $F \notin  k(x)$, then $x$ is 
-transcendental over $K$ by proposition \ref{90cdk2938db129}. Similarly, 
-if $F\notin  k(y)$, then $y$ is transcendental over $K$. 
+	Let $F \in A \backslash  k$. Then if $F \notin  k(x)$, then $x$ is 
+	transcendental over $K$ by proposition \ref{90cdk2938db129}. Similarly, 
+	if $F\notin  k(y)$, then $y$ is transcendental over $K$. 
 \end{proof}
 
 \begin{proposition}
-For some $t \in \{x,y\}$, $L/K(t)$ is a finite extension and therefore
-$L/K$ is a function field of one variable.
-Furthermore, $F \in  k[x]$.
+	For some $t \in \{x,y\}$, $L/K(t)$ is a finite extension and therefore
+	$L/K$ is a function field of one variable.
+	Furthermore, $F \in  k[x]$.
 \end{proposition}
 
 \begin{proof}
-Suppose that both $L/K(x)$ and $L/K(y)$ are not finite. Then we get the following
-chain of inclusions $ k(x) \subseteq K(x) \subset L$ and $ k(y) \subseteq K(y) \subset L$. 
-Observe that both $L/ k(x)$ and $L/ k(y)$ are function fields in one 
-variable. So the fact that both $L/K(x)$ and $l/K(y)$ are not finite implies 
-that $K(x)/ k(x)$ and $K(y)/ k(y)$ are both algebraic. In particular,
-$F$ is algebraic over $ k(x)$ and $ k(y)$. Hence by proposition \ref{90cdk2938db129}
-$F\in  k[x]$ and $F\in  k[y]$, which is impossible. So for some $t \in \{x,y\}$, $L/K(t)$ is a finite extension.
+	Suppose that both $L/K(x)$ and $L/K(y)$ are not finite. Then we get the following
+	chain of inclusions $ k(x) \subseteq K(x) \subset L$ and $ k(y) \subseteq K(y) \subset L$. 
+	Observe that both $L/ k(x)$ and $L/ k(y)$ are function fields in one 
+	variable. So the fact that both $L/K(x)$ and $l/K(y)$ are not finite implies 
+	that $K(x)/ k(x)$ and $K(y)/ k(y)$ are both algebraic. In particular,
+	$F$ is algebraic over $ k(x)$ and $ k(y)$. Hence by proposition \ref{90cdk2938db129}
+	$F\in  k[x]$ and $F\in  k[y]$, which is impossible. So for some $t \in \{x,y\}$, $L/K(t)$ is a finite extension.
 \end{proof}
 
 \begin{remark}
-So, for any choice of $F \in A \setminus  k$, $L/K$ is a function field of one variable
-(it is important that $F \notin  k$ here; 
-if $F \in  k$, then $ k(F)= k$ and the field extension $L/ k$ has transcendental degree 2).
-The properties of the function field $L/K$ depend on the choice of $F$:
-whether or not $K$ is algebraically closed in $L$ depends on the choice of $F$;
-whether or not $L/K$ is the rational function field depends on the choice of $F$.
+	So, for any choice of $F \in A \setminus  k$, $L/K$ is a function field of one variable
+	(it is important that $F \notin  k$ here; 
+	if $F \in  k$, then $ k(F)= k$ and the field extension $L/ k$ has transcendental degree 2).
+	The properties of the function field $L/K$ depend on the choice of $F$:
+	whether or not $K$ is algebraically closed in $L$ depends on the choice of $F$;
+	whether or not $L/K$ is the rational function field depends on the choice of $F$.
 \end{remark}
 
 \begin{example} \label {ue0982rhr329r23jew}
-Let $k = \Comp$. Then for each of
-the following values of $F$, the function 
-field $L/K$ is the rational 
-function field.
+	Let $k = \Comp$. Then for each of
+	the following values of $F$, the function 
+	field $L/K$ is the rational 
+	function field.
 
-\begin{enumerate}
-	\item $F = xy^2$
-	\item $F = x^2y^3$
-	\item $F = x(y+x^3)$ 
-	\item $F = y^2 + x^2 - 1$
-\end{enumerate}
-To prove this, it suffices to find $G \in L$ such that $L = K(G)$.
-\begin{enumerate}
-	\item $K(y)=\Comp (xy^2,y) = \Comp (xy^2y^{-2},y)=\Comp (x,y) = L$
-	\item $K(xy)=\Comp(x^2y^3,xy)=\Comp(x^2y^3x^{-2}y^{-2},xy)=\Comp(y,xy)=\Comp(x,y)=L$
-	\item $K(x)= \Comp(x(y+x^3),x)=\Comp(y+x^3,x)=\Comp(y+x^3 - x^3,x)=\Comp(x,y)=L$ 
-	\item Let $u = x+iy$ and $v=x-iy$ of $L=\Comp(x,y)$. 
-	Notice that $uv=x^2+y^2 = F + 1$.  
-	So $K = \Comp(x^2+y^2-1) = \Comp(x^2+y^2) = \Comp(uv)$ and
-	consequently $K(v) = \Comp(uv,v) = \Comp(u,v) = L$.
-\end{enumerate} 
+	\begin{enumerate}
+		\item $F = xy^2$
+		\item $F = x^2y^3$
+		\item $F = x(y+x^3)$ 
+		\item $F = y^2 + x^2 - 1$
+	\end{enumerate}
+	To prove this, it suffices to find $G \in L$ such that $L = K(G)$.
+	\begin{enumerate}
+		\item $K(y)=\Comp (xy^2,y) = \Comp (xy^2y^{-2},y)=\Comp (x,y) = L$
+		\item $K(xy)=\Comp(x^2y^3,xy)=\Comp(x^2y^3x^{-2}y^{-2},xy)=\Comp(y,xy)=\Comp(x,y)=L$
+		\item $K(x)= \Comp(x(y+x^3),x)=\Comp(y+x^3,x)=\Comp(y+x^3 - x^3,x)=\Comp(x,y)=L$ 
+		\item Let $u = x+iy$ and $v=x-iy$ of $L=\Comp(x,y)$. 
+		Notice that $uv=x^2+y^2 = F + 1$.  
+		So $K = \Comp(x^2+y^2-1) = \Comp(x^2+y^2) = \Comp(uv)$ and
+		consequently $K(v) = \Comp(uv,v) = \Comp(u,v) = L$.
+	\end{enumerate} 
 \end{example}
 
 \begin{notation}
-Let $F \in A \setminus  k$.
-\begin{enumerate}[(a)]
-\item Let $\VV(F)$ be the set of all valuation rings of the function field $L/K$.
-The notation `$\VV(F)$' reminds us that this set of rings depends on the choice of $F$.
-
-\item Let $\PP(F)$ be the set of places of $L/K$.
-
-\item Let $\VV^\infty(F) = \setspec{ R \in \VV(F) }{ A \nsubseteq R }$.
-
-\end{enumerate}
-Note that $\VV^\infty(F) = \setspec{ R \in \VV(F) }{ \{x,y\} \nsubseteq R }$.
+	Let $F \in A \setminus  k$.
+	\begin{enumerate}[(a)]
+		\item Let $\VV(F)$ be the set of all valuation rings of the function field $L/K$.
+		The notation `$\VV(F)$' reminds us that this set of rings depends on the choice of $F$.
+		\item Let $\PP(F)$ be the set of places of $L/K$.
+		\item Let $\VV^\infty(F) = \setspec{ R \in \VV(F) }{ A \nsubseteq R }$.
+	\end{enumerate}
+	Note that $\VV^\infty(F) = \setspec{ R \in \VV(F) }{ \{x,y\} \nsubseteq R }$.
 \end{notation}
 
 
 \begin{proposition} \label {3o9jdb9182so}
-Let $F \in A \setminus  k$.
-\begin{enumerate}[(a)]
-\item \label{notmempty} $\VV^\infty(F)$ is a nonempty set.
-\item \label{finite} $\VV^\infty(F)$ is a finite set.
-\end{enumerate}
+	Let $F \in A \setminus  k$.
+	\begin{enumerate}[(a)]
+	\item \label{notmempty} $\VV^\infty(F)$ is a nonempty set.
+	\item \label{finite} $\VV^\infty(F)$ is a finite set.
+	\end{enumerate}
 \end{proposition}
 
 \begin{proof}
-\eqref{notmempty}: By \ref{9fo13d912o9o0}, 
-we know that at least one of $x,y$ is transcendental 
-over $K$. Assume $x$ is transcendental over $K$, then by 
-corollary \ref{everyonesgotapole}, $x$ has at least one pole. 
-That is, there exists 
-a place $P$ such that $v_P(x)<0$. Let $\OV_P$ be 
-the valuation ring of $L$ corresponding to $P$. Hence $V^{\infty}(F) \neq \emptyset$. 
-\eqref{finite}:
+	\eqref{notmempty}: By \ref{9fo13d912o9o0}, 
+	we know that at least one of $x,y$ is transcendental 
+	over $K$. Assume $x$ is transcendental over $K$, then by 
+	corollary \ref{everyonesgotapole}, $x$ has at least one pole. 
+	That is, there exists 
+	a place $P$ such that $v_P(x)<0$. Let $\OV_P$ be 
+	the valuation ring of $L$ corresponding to $P$. Hence $V^{\infty}(F) \neq \emptyset$. 
+	\eqref{finite}:
 \end{proof}
 
 \begin{definition}
-Let $F \in A \setminus  k$.
-The elements of the nonempty finite set $\VV^\infty(F)$ are called the {\it dicriticals\/} of $F$.
-We define the {\it degree\/} of a dicritical $R$ of $F$ to be $\deg P$, where
-$P$ is the place of $R$.
+	Let $F \in A \setminus  k$.
+	The elements of the nonempty finite set $\VV^\infty(F)$ are called the {\it dicriticals\/} of $F$.
+	We define the {\it degree\/} of a dicritical $R$ of $F$ to be $\deg P$, where
+	$P$ is the place of $R$.
 \end{definition}
 
 \begin{example} \label {982b8d12vxowe9f}
-Let $F=x$. In this case, we have $K= k(x)$; 
-so $L=K(y)$ is the rational function field.
-The place at infinity of $K(y)$ is $R = K[ z ]_{(z)}$ where $z = y^{-1}$;
-since $y \notin R$, we have $R \in \VV^\infty(F)$.  
-The degree of this dicritical is $1$,
-because we know that the place at infinity of $K(y)$ has degree $1$.
-If $R'$ is any valuation ring of $L/K$ other than $R$
-then $R' = K[y]_{(p)}$ for some irreducible polynomial $p \in K[y]$;
-then $x \in K \subseteq K[y]_{(p)}$ and $y \in K[y]_{(p)}$, 
-so $\{x,y\} \subseteq R'$ and $R' \notin  \VV^\infty(F)$.
-Hence  $\VV^\infty(x) = \lbrace K[z]_{(z)} \rbrace$. Since 
-$\deg K[z]_{(z)} = 1$. We say that $F$ has only 1 rational 
-dicritical. 
+	Let $F=x$. In this case, we have $K= k(x)$; 
+	so $L=K(y)$ is the rational function field.
+	The place at infinity of $K(y)$ is $R = K[ z ]_{(z)}$ where $z = y^{-1}$;
+	since $y \notin R$, we have $R \in \VV^\infty(F)$.  
+	The degree of this dicritical is $1$,
+	because we know that the place at infinity of $K(y)$ has degree $1$.
+	If $R'$ is any valuation ring of $L/K$ other than $R$
+	then $R' = K[y]_{(p)}$ for some irreducible polynomial $p \in K[y]$;
+	then $x \in K \subseteq K[y]_{(p)}$ and $y \in K[y]_{(p)}$, 
+	so $\{x,y\} \subseteq R'$ and $R' \notin  \VV^\infty(F)$.
+	Hence  $\VV^\infty(x) = \lbrace K[z]_{(z)} \rbrace$. Since 
+	$\deg K[z]_{(z)} = 1$. We say that $F$ has only 1 rational 
+	dicritical. 
 \end{example}
 
 \begin{example} \label {0ndvx54120cmrnh}
-The polynomial $F=xy$ has two dicriticals, $k[z_1]_{(z_1)}$ 
-and $K[z_2]_{(z_2)}$, where $z_1=x^{-1}$ and $z_2=y^{-1}$. 
+	The polynomial $F=xy$ has two dicriticals, $k[z_1]_{(z_1)}$ 
+	and $K[z_2]_{(z_2)}$, where $z_1=x^{-1}$ and $z_2=y^{-1}$. 
 \end{example}
 
 
 \begin{definition}
-Use square brackets to represent unordered lists of positive integers.
-For instance, $[1,1,2] = [1,2,1] = [2,1,1] \neq [1,2,2]$. Let $F \in A \setminus  k$.
-Let $R_1, \dots, R_s$ be the distinct dicriticals of $F$, where $R_i$ is a dicritical of degree $d_i$.
-Then we write $\Delta(F) = [ d_1, \dots, d_s ]$.
+	Use square brackets to represent unordered lists of positive integers.
+	For instance, $[1,1,2] = [1,2,1] = [2,1,1] \neq [1,2,2]$. Let $F \in A \setminus  k$.
+	Let $R_1, \dots, R_s$ be the distinct dicriticals of $F$, where $R_i$ is a dicritical of degree $d_i$.
+	Then we write $\Delta(F) = [ d_1, \dots, d_s ]$.
 \end{definition}
 
 \begin{examples}
-From \ref{982b8d12vxowe9f}, $\Delta(x) = \Delta(y) = [1]$.
-By \ref{0ndvx54120cmrnh}, $\Delta(xy)=[1,1]$.
+	From \ref{982b8d12vxowe9f}, $\Delta(x) = \Delta(y) = [1]$.
+	By \ref{0ndvx54120cmrnh}, $\Delta(xy)=[1,1]$.
 \end{examples}
