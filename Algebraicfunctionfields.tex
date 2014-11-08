@@ -5,9 +5,10 @@
 % and create pdf.
 % You must have Latex installed on your computer.
 
-\documentclass{article} 
-% \documentclass[12pt,a4paper]{amsbook}
-% \usepackage[margin=0.5in, top=0.5in]{geometry}
+\documentclass{
+	article
+} 
+
 \usepackage{
 	amsmath,
 	amsfonts,
@@ -22,8 +23,6 @@
 	color,
 	blindtext
 }
-
-% \usepackage[all]{y}
 
 \hypersetup{
 	breaklinks=true,
@@ -185,43 +184,28 @@
 	\renewcommand{\baselinestretch}{1.07}
 	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
 
-% Pages sizing
+% Set indents to 0
+\setlength\parindent{0pt}
 
 
-	% \setlength{\textwidth}{15.5cm}
-	% % \setlength{\mylength}{1.45\mylength}
-	% % \settowidth{\mylength}{$\,$}
-	% \addtolength{\oddsidemargin}{-1cm}
-	% \addtolength{\evensidemargin}{-1cm}
-	% \addtolength{\textheight}{14mm}
-
-	% \raggedbottom
-	% \CompileMatrices
-	% \newlength{\mylength}
-
-	\setlength\parindent{0pt}
-
-
-	% Title and toc
-	\begin{document}
+% Title and toc
+\begin{document}
 	\begin{titlepage}
-	\begin{center}
-
-	\HRule \\[0.4cm] % Horizontal line
-	{\huge \bfseries Algebraic Function Fields}\\[0.4cm] 
-	\HRule \\[0.8cm] % Horizontal line
-	{\large A Document Prepared for Daniel Daigle} \\[1.0cm]
-	{\large Kevin Johnson} \\[0.5cm]
-	{\large \today}\\
-
-	\end{center}
+		\begin{center}
+			\HRule \\[0.4cm] % Horizontal line
+			{\huge \bfseries Algebraic Function Fields}\\[0.4cm] 
+			\HRule \\[0.8cm] % Horizontal line
+			{\large A Document Prepared for Daniel Daigle} \\[1.0cm]
+			{\large Kevin Johnson} \\[0.5cm]
+			{\large \today}\\
+		\end{center}
 	\end{titlepage}
 
 	\tableofcontents
 	\pagebreak
 
 
-% main document 
+	% main document 
 	\section{Places}
 		\input{places}
 	\section{The Rational Function Field}
@@ -234,5 +218,4 @@
 		\input{fieldgenerators}
 	\section{Exercises}
 		\input{exercises}
-
 \end{document}

@@ -28,9 +28,9 @@
 	Then $p = gh = (a_1y + a_2)(b_1y + b_2) = a_1b_1y^2 + (a_1b_2 + a_2b_1)y + a_2b_2 $.
 	Thus we have the equations;
 	\begin{align*}
-	&a_1b_1 = 1  \\
-	&a_1b_2 + a_2b_1 = 0 \\
-	&a_2b_2 = x^3 - x 
+		&a_1b_1 = 1  \\
+		&a_1b_2 + a_2b_1 = 0 \\
+		&a_2b_2 = x^3 - x 
 	\end{align*} 
 	$a_1b_1 = 1 \Longrightarrow a_1 = b_1^{-1}$. 
 	Then $a_1b_2 + a_2b_1 = 0$ becomes
@@ -110,10 +110,10 @@
 	let $m^{\prime}(T) = h(x)m(T)$. 
 	Thus
 	\begin{align*}
-	m^{\prime}(z) &= (a^2 - b^2(x-x^3)^2)^n(a_0 + a_1(\frac{f}{a+by}) + ... + a_n(\frac{f}{a+by})^n) \\
-	&= (a+by)^n(a-by)^n (a_0 + a_1(\frac{f}{a+by}) + ... + a_n(\frac{f^n}{(a+by)^n})) \\
-	&= (a+by)^n(a-by)^na_0 + a_1(a+by)^{n-1}(a-by)^nf + ... + a_nf^n(a-by)^n \\
-	&= 0  
+		m^{\prime}(z) &= (a^2 - b^2(x-x^3)^2)^n(a_0 + a_1(\frac{f}{a+by}) + ... + a_n(\frac{f}{a+by})^n) \\
+		&= (a+by)^n(a-by)^n (a_0 + a_1(\frac{f}{a+by}) + ... + a_n(\frac{f^n}{(a+by)^n})) \\
+		&= (a+by)^n(a-by)^na_0 + a_1(a+by)^{n-1}(a-by)^nf + ... + a_nf^n(a-by)^n \\
+		&= 0  
 	\end{align*}
 
 	So it suffices to find a nonzero polynomial $m(T) \in \Comp (x)[T]$
@@ -129,13 +129,13 @@
 	Then we may write $f = ax+by,g = cx + dy$ for $a,b,c,d \in \C[x,y]$.
 	Thus
 	\begin{align*}
-	z &= f/g \\
-	&= \frac{ax+by}{cx + dy} \\
-	&= \frac{(ax+by)(cx - dy)}{(cx + dy)(cx - dy)} \\
-	&= \frac{acx^2 + (cb-ad)xy - bdy^2}{c^2x^2 -d^2y^2} \\
-	&= \frac{acx^2 + (cb-ad)xy - bd(x-x^3)}{c^2x^2 -d^2(x-x^3)} \\
-	&= \frac{acx + (cb-ad)y - bd(1-x^2)}{c^2x -d^2(1-x^2)} \\
-	&= \frac{acx + (cb-ad)y - bd + bdx^2}{c^2x -d^2 + d^2x^2} 
+		z &= f/g \\
+		&= \frac{ax+by}{cx + dy} \\
+		&= \frac{(ax+by)(cx - dy)}{(cx + dy)(cx - dy)} \\
+		&= \frac{acx^2 + (cb-ad)xy - bdy^2}{c^2x^2 -d^2y^2} \\
+		&= \frac{acx^2 + (cb-ad)xy - bd(x-x^3)}{c^2x^2 -d^2(x-x^3)} \\
+		&= \frac{acx + (cb-ad)y - bd(1-x^2)}{c^2x -d^2(1-x^2)} \\
+		&= \frac{acx + (cb-ad)y - bd + bdx^2}{c^2x -d^2 + d^2x^2} 
 	\end{align*}
 
 	Notice, if $b\neq 0, d \neq 0$, then both the numerator and denominator 
@@ -147,388 +147,341 @@
 \end{solution}
 
 \begin{exercise} \label{primeontoprime}
-Let $A \stackrel{\phi}{\longrightarrow} B$ be a surjective homomorphism of rings. 
-Let $\pgoth $ be a prime ideal in $R$ containing the kernel of $\phi$. 
-Then $\phi(\pgoth)$ is prime in $S$.
+	Let $A \stackrel{\phi}{\longrightarrow} B$ be a surjective homomorphism of rings. 
+	Let $\pgoth $ be a prime ideal in $R$ containing the kernel of $\phi$. 
+	Then $\phi(\pgoth)$ is prime in $S$.
 \end{exercise}
 
 \begin{solution} 
-Let $x,y \in B$ and suppose $xy \in \phi(\mathfrak{p})$. Since $\phi$ is 
-surjectivity, there exists $a, b \in A$ such that $\phi(a)= x$, $\phi(b)=y$. 
-Choose $c \in \mathfrak{p}$ such that $\phi(c) = xy$.  
-Then $ab -c \in ker(\phi)$, so $ab \in \mathfrak{p}$.  
-Thus, either $a$ or $b$ is in $\mathfrak{p}$, which means 
-either $x$ or $y$ is in $\phi(\mathfrak{p})$.
+	Let $x,y \in B$ and suppose $xy \in \phi(\mathfrak{p})$. Since $\phi$ is 
+	surjectivity, there exists $a, b \in A$ such that $\phi(a)= x$, $\phi(b)=y$. 
+	Choose $c \in \mathfrak{p}$ such that $\phi(c) = xy$.  
+	Then $ab -c \in ker(\phi)$, so $ab \in \mathfrak{p}$.  
+	Thus, either $a$ or $b$ is in $\mathfrak{p}$, which means 
+	either $x$ or $y$ is in $\phi(\mathfrak{p})$.
 \end{solution}
 
     
 \begin{exercise}(Stichtenoth, Exercise 1.1)
-Consider the rational function field $K(x)/K$ and a non-constant element 
-$z = f(x)/g(x) \in K(x) \backslash K$, where $f(x),g(x) \in K[x]$ are 
-relatively prime. We call $deg(z) = max \lbrace deg(f) , deg(g) \rbrace $ 
-the degree of $z$.
-\begin{enumerate}[(i)]
-\item Show that $[K(x): K(z)] = deg(z)$, and write down the minimal 
-polynomial of $x$ over $K(z)$
-\item Show that $K(x)=K(z) $ if and only if $z = (ax+b)/(cx+d)$ with
-$a,b,c,d \in K$ and $ad - bc \neq 0$.
-\end{enumerate}
+	Consider the rational function field $K(x)/K$ and a non-constant element 
+	$z = f(x)/g(x) \in K(x) \backslash K$, where $f(x),g(x) \in K[x]$ are 
+	relatively prime. We call $deg(z) = max \lbrace deg(f) , deg(g) \rbrace $ 
+	the degree of $z$.
+	\begin{enumerate}[(i)]
+		\item Show that $[K(x): K(z)] = deg(z)$, and write down the minimal 
+		polynomial of $x$ over $K(z)$
+		\item Show that $K(x)=K(z) $ if and only if $z = (ax+b)/(cx+d)$ with
+		$a,b,c,d \in K$ and $ad - bc \neq 0$.
+	\end{enumerate}
 \end{exercise}
 
 \begin{solution} 
-We find the minimal polynomial of the field extension $K(x)/K(z)$.
-\begin{enumerate}[(i)]
+	We find the minimal polynomial of the field extension $K(x)/K(z)$.
+	\begin{enumerate}[(i)]
 
-\item Consider the polynomial $m(t) = zg(t) - f(t) \in K(z)[t]$. 
-Notice that $0 \neq z = f(x)/g(x) \Longrightarrow f(x) \neq 0 \Longrightarrow m(t) \neq 0$
-and that $m(x) = 0$. Also, if $deg(g(x)) \geq deg(f(x))$, 
-then $deg(m(t)) = deg(g(t)) = deg(g(x))$.
-Otherwise $deg(m(t)) = deg(f(t)) = deg(f(x))$. So $deg(m(t)) = deg(z)$,
-as required. Lastly we need to show that $m(t)$ is irreducible over
-$K(z)$. By Gauss's lemma, it is sufficient to check that $m(t)$ is 
-irreducible over $K[z]$ but $K[z][t]=K[t][z]$, in which $m(t)$ is linear. 
-Hence $m$ is the minimal polynomial of the field extension $K(x)/K(z)$ 
-and $[K(x):K(z)] = deg(m(t)) = deg(z)$ as required.
+		\item Consider the polynomial $m(t) = zg(t) - f(t) \in K(z)[t]$. 
+		Notice that $0 \neq z = f(x)/g(x) \Longrightarrow f(x) \neq 0 \Longrightarrow m(t) \neq 0$
+		and that $m(x) = 0$. Also, if $deg(g(x)) \geq deg(f(x))$, 
+		then $deg(m(t)) = deg(g(t)) = deg(g(x))$.
+		Otherwise $deg(m(t)) = deg(f(t)) = deg(f(x))$. So $deg(m(t)) = deg(z)$,
+		as required. Lastly we need to show that $m(t)$ is irreducible over
+		$K(z)$. By Gauss's lemma, it is sufficient to check that $m(t)$ is 
+		irreducible over $K[z]$ but $K[z][t]=K[t][z]$, in which $m(t)$ is linear. 
+		Hence $m$ is the minimal polynomial of the field extension $K(x)/K(z)$ 
+		and $[K(x):K(z)] = deg(m(t)) = deg(z)$ as required.
 
-\item Assume $z = (ax+b)/(cx + d)$ with $a,b,c,d \in K$ and 
-$ad - cd \neq 0$. The condition $ad-bc \neq 0 $ implies that 
-$z \notin K$. By part $i)$, $[K(x):K(z)] = deg(z) = 1$, Hence 
-$K(x) = K(z)$. Assume $K(x) = K(z)$ and suppose $z \neq (ax+b)/(cx + d) $ 
-for any $a,b,c,d \in K$ satisfying $ad - bc \neq 0$. Then 
-either $z \in K$ or $deg(z) \geq 2$. If $z \in K$, then $K(z) = K$, 
-which would imply $K(x) = K$, a contradiction to the fact 
-that $x$ is transcendental over $K$. If $deg(z) \geq 2$, 
-then by part $i)$, $[K(x):K(z)] \geq 2$. This contradicts the fact 
-that every field is a one dimensional vector space over itself. 
-So our supposition must be false, thus $z = (ax+b)/(cx+d)$ with 
-$a,b,c,d \in K$ and $ad - bc \neq 0$.
-
-\end{enumerate}
+		\item Assume $z = (ax+b)/(cx + d)$ with $a,b,c,d \in K$ and 
+		$ad - cd \neq 0$. The condition $ad-bc \neq 0 $ implies that 
+		$z \notin K$. By part $i)$, $[K(x):K(z)] = deg(z) = 1$, Hence 
+		$K(x) = K(z)$. Assume $K(x) = K(z)$ and suppose $z \neq (ax+b)/(cx + d) $ 
+		for any $a,b,c,d \in K$ satisfying $ad - bc \neq 0$. Then 
+		either $z \in K$ or $deg(z) \geq 2$. If $z \in K$, then $K(z) = K$, 
+		which would imply $K(x) = K$, a contradiction to the fact 
+		that $x$ is transcendental over $K$. If $deg(z) \geq 2$, 
+		then by part $i)$, $[K(x):K(z)] \geq 2$. This contradicts the fact 
+		that every field is a one dimensional vector space over itself. 
+		So our supposition must be false, thus $z = (ax+b)/(cx+d)$ with 
+		$a,b,c,d \in K$ and $ad - bc \neq 0$.
+	\end{enumerate}
 \end{solution}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{exercise}(Stichtenoth, Exercise 1.2) \label{GLP2}
-For a field extension $L/M$ we denote by $Aut(K(x)/K)$ the group 
-of automorphisms of $L/M$ (i.e., automorphisms of $L$ which are 
-the identity on $M$). Let $K(x)/K$ be the rational function field 
-over $K$. Show:
+	For a field extension $L/M$ we denote by $Aut(K(x)/K)$ the group 
+	of automorphisms of $L/M$ (i.e., automorphisms of $L$ which are 
+	the identity on $M$). Let $K(x)/K$ be the rational function field 
+	over $K$. Show:
 
-\begin{enumerate}[(i)]
+	\begin{enumerate}[(i)]
+		\item \label{existsabcd} For every $\sigma \in Aut(K(x)/K)$ there 
+		exists $a,b,c,d \in K$ such that $ad-bc \neq 0$ and $\sigma (x) = (ax+b)/(cx+d)$. 
 
-\item \label{existsabcd} For every $\sigma \in Aut(K(x)/K)$ there 
-exists $a,b,c,d \in K$ such that $ad-bc \neq 0$ and $\sigma (x) = (ax+b)/(cx+d)$. 
+		\item Given $a,b,c,d \in K $ with $ad - bc \neq 0$, there 
+		is a unique automorphism $\sigma \in Aut(K(x)/K)$ with $\sigma(x) = (ax+b)/(cx+d)$.
 
-% \item Given $a,b,c,d \in K $ with $ad - bc \neq 0$, there 
-% is a unique automorphism $\sigma \in Aut(K(x)/K)$ with $\sigma(x) = (ax+b)/(cx+d)$.
-
-\item Denote by $GL_2(K)$ the group of invertible $2 \times 2$ 
-- matrices over $K$. For $A= 
-\begin{pmatrix} a & c \\ b & d \\ \end{pmatrix} \in GL_2(K)$ 
-denote by $\sigma_A$ the automophism of $K(x)/K$ with $\sigma_A(x) = (ax+b)/(cx+d) $. 
-Show that the map that sends $A$ to $\sigma_A$, is a homomorphism of $GL_2(K) $ 
-onto $Aut(K(x)/K)$. Its kernel is the set of diagonal matrices of the 
-form $\begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix}$ with $a \in K^{\times}$, 
-hence $$Aut(K(x)/K) \cong GL_2(K)/K^{\times}$$ (The group $GL_2(K)/K^{\times}$ 
-is called the projective linear group and is denoted by $PGL_2(K)$.)
-
-\end{enumerate}
+		\item Denote by $GL_2(K)$ the group of invertible $2 \times 2$ 
+		- matrices over $K$. For $A= 
+		\begin{pmatrix} a & c \\ b & d \\ \end{pmatrix} \in GL_2(K)$ 
+		denote by $\sigma_A$ the automophism of $K(x)/K$ with $\sigma_A(x) = (ax+b)/(cx+d) $. 
+		Show that the map that sends $A$ to $\sigma_A$, is a homomorphism of $GL_2(K) $ 
+		onto $Aut(K(x)/K)$. Its kernel is the set of diagonal matrices of the 
+		form $\begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix}$ with $a \in K^{\times}$, 
+		hence $$Aut(K(x)/K) \cong GL_2(K)/K^{\times}$$ (The group $GL_2(K)/K^{\times}$ 
+		is called the projective linear group and is denoted by $PGL_2(K)$.)
+	\end{enumerate}
 \end{exercise}
 
 \begin{solution} 
-Any given tuple $(a,b,c,d) \in K^4$ will satisfy $ad - bc = 0$ 
-unless otherwise specified.
+	Any given tuple $(a,b,c,d) \in K^4$ will satisfy $ad - bc = 0$ 
+	unless otherwise specified.
+	\begin{enumerate}[(i)]
+		\item Let $\sigma \in Aut(K(x)/K)$. We show that $K(x) = K(\sigma(x)) $. 
+		Let $f \in K(\sigma(x))$, then 
+		$$
+		f(\sigma(x)) = \frac{a_n\sigma(x)^n + a_{n-1}\sigma(x)^{n-1} + ... + a_0 }{b_m\sigma(x)^m + b_{m-1}\sigma(x)^{m-1} + ... + b_0 } 
+		$$ 
+		for $a_0,...,a_n,b_0,...,b_m \in K$. Since $\sigma(a) = a $ 
+		for all $a \in K$ and $\sigma$ is a homomorphism, we may 
+		rewrite $f$ as $$\sigma (\frac{a_nx^n + a_{n-1}x^n + ... + a _0}{b_mx^m + b_{m-1}x^{m-1} + ... + b_0}) \in im(\sigma)$$ 
+		Since $\sigma$ is surjective, $f \in im(\sigma) = K(x)$. \\
 
+		Let $f \in K(x)$, then $f \in im(\sigma)$ by surjectivity of $\sigma$. 
+		Hence there exists some $g\in K(x)$ such that $\sigma(g(x)) = f(x)$.
+		Write $$g(x) = \frac{a_nx^n + a_{n-1}x^n + ... + a _0}{b_mx^m + b_{m-1}x^{m-1} + ... + b_0}$$ 
+		then $$
+		f(x)= \sigma(\frac{a_nx^n + a_{n-1}x^n + ... + a _0}{b_mx^m + b_{m-1}x^{m-1} + ... + b_0}) 
+		= \frac{a_n\sigma(x)^n + a_{n-1}\sigma(x)^{n-1} + ... + a_0 }{b_m\sigma(x)^m + b_{m-1}\sigma(x)^{m-1} + ... + b_0 } 
+		$$ 
+		Hence $f \in K(\sigma(x))$. That is, $K(x) = K(\sigma(x))$ as required.
+		By part (ii) of exercise 1, $\sigma(x) = (ax+b)/(cx+d)$.
 
+		\item Let $a,b,c,d \in K$, define $\sigma : K(x) \longrightarrow K(x) $ by $\sigma(f(x)/g(x))$ 
 
-\begin{enumerate}[(i)]
-
-\item Let $\sigma \in Aut(K(x)/K)$. We show that $K(x) = K(\sigma(x)) $. 
-Let $f \in K(\sigma(x))$, then 
-$$
-f(\sigma(x)) = \frac{a_n\sigma(x)^n + a_{n-1}\sigma(x)^{n-1} + ... + a_0 }{b_m\sigma(x)^m + b_{m-1}\sigma(x)^{m-1} + ... + b_0 } 
-$$ 
-for $a_0,...,a_n,b_0,...,b_m \in K$. Since $\sigma(a) = a $ 
-for all $a \in K$ and $\sigma$ is a homomorphism, we may 
-rewrite $f$ as $$\sigma (\frac{a_nx^n + a_{n-1}x^n + ... + a _0}{b_mx^m + b_{m-1}x^{m-1} + ... + b_0}) \in im(\sigma)$$ 
-Since $\sigma$ is surjective, $f \in im(\sigma) = K(x)$. \\
-
-Let $f \in K(x)$, then $f \in im(\sigma)$ by surjectivity of $\sigma$. 
-Hence there exists some $g\in K(x)$ such that $\sigma(g(x)) = f(x)$.
-Write $$g(x) = \frac{a_nx^n + a_{n-1}x^n + ... + a _0}{b_mx^m + b_{m-1}x^{m-1} + ... + b_0}$$ 
-then $$
-f(x)= \sigma(\frac{a_nx^n + a_{n-1}x^n + ... + a _0}{b_mx^m + b_{m-1}x^{m-1} + ... + b_0}) 
-= \frac{a_n\sigma(x)^n + a_{n-1}\sigma(x)^{n-1} + ... + a_0 }{b_m\sigma(x)^m + b_{m-1}\sigma(x)^{m-1} + ... + b_0 } 
-$$ 
-Hence $f \in K(\sigma(x))$. That is, $K(x) = K(\sigma(x))$ as required.
-By part (ii) of exercise 1, $\sigma(x) = (ax+b)/(cx+d)$.
-
-% \item Let $a,b,c,d \in K$, define $\sigma : K(x) \longrightarrow K(x) $ by $\sigma(f(x)/g(x))$ 
-
-\item Let $\Phi : GL_2(K) \longrightarrow Aut(K(x)/K) $ be defined as
-$\Phi (A) = \sigma_A $ for all $A \in GL_2(K)$. 
-\begin{remark}
-To verify that two automorphisms $\sigma_2,\sigma_1 \in Aut(K(x)/K)$ 
-are equivalent, it suffices so show that $\sigma_1(x)=\sigma_2(x)$. 
-This is because every automorphism of $Aut(K(x)/K)$ is uniquely 
-determined by $x$. 
-\end{remark}
-First, $\Phi$ preserves
-identity: $\Phi(\begin{pmatrix} 1 & 0 \\ 0 & 1 \\ \end{pmatrix})(x) = (1x + 0)/(0x +1) = x = i(x)$
-where $i$ is the indentiy automorphism of $Aut(K(x)/K)$. Let $A,B \in GL_2(K)$.
-Then $A = \begin{pmatrix} a & c \\ b & d \\ \end{pmatrix} , B = \begin{pmatrix} e & g \\ f & h \\ \end{pmatrix} $ 
-for $a,b,c,d,e,f,g,h \in K$. Then
-
-\begin{align*}
-\Phi (\begin{pmatrix} a & c \\ b & d \\ \end{pmatrix}
-\begin{pmatrix} e & g \\ f & h \\ \end{pmatrix})(x) &= 
-\Phi (\begin{pmatrix} ae + cf & ag + ch \\ be + df & bg + dh \\ \end{pmatrix})(x) \\
-&= \frac{(ae+cf)x + be+df}{(ag+ch)x+bg+dh} (x)\\
-&= \frac{e(ax+b) + (cx+d)f}{g(ax+b)+ (cx+d)h} \\
-&= \frac{[e(ax+b) + (cx+d)f](cx+d)}{[g(ax+b)+ (cx+d)h](cx+d)} \\
-&= \frac{\frac{e(ax+b) + (cx+d)f}{(cx+d)}}{\frac{g(ax+b) + (cx+d)h}{(cx+d)}} \\
-&= \frac{\frac{e(ax+b)}{(cx+d)}+f}{\frac{g(ax+b)}{(cx+d)}+h} \\
-&= \frac{e\sigma_A(x)+f}{g\sigma_A(x)+h} \\
-&= \sigma_A(\frac{ex+f}{gx+h})(x) \\
-&= \sigma_A \circ \sigma_B (x) \\
-&= \Phi(\begin{pmatrix} a & c \\ b & d \\ \end{pmatrix}) \Phi(\begin{pmatrix} e & g \\ f & h \\ \end{pmatrix}) (x)
-\end{align*}
-
-\noindent Hence $\Phi$ is a group homomorphism. Clearly
-$\Phi(\begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix})(x) = \frac{ax + 0}{0x +a} = x = i(x)$. 
-So $\begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix} \in ker(\Phi)$. 
-Let $A = \begin{pmatrix} a & c \\ b & d \\ \end{pmatrix} \in ker(\Phi)$, 
-then $\frac{ax+b}{cx + d} = x \Rightarrow 0 = cx^2 + (d-a)x - b \Rightarrow a = d, b = c = 0$. 
-Notice that $a=d = 0$ implies $ad - bc = 0$, which is not allowed here. 
-Hence $ker(\Phi) = \begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix} $ 
-where $a \in K^{\times}$. Let $\sigma \in Aut(K(x)/K)$, 
-then by part \eqref{existsabcd}, there exists $a,b,c,d \in K$ such that 
-$\sigma(x) = \frac{ax+b}{cx+d}$, that is there exists 
-$A = \begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix} \in GL_2(K)$ such that 
-$\Phi(A) = \sigma$. Hence $\Phi$ is surjective and $Aut(K(x)/K) \cong GL_2(K)/\mathfrak{K}$,
-where $\mathfrak{K} = \begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix}$ for $a \in K^{\times}$.
-
-\end{enumerate}
+		\item Let $\Phi : GL_2(K) \longrightarrow Aut(K(x)/K) $ be defined as
+		$\Phi (A) = \sigma_A $ for all $A \in GL_2(K)$. 
+		\begin{remark}
+			To verify that two automorphisms $\sigma_2,\sigma_1 \in Aut(K(x)/K)$ 
+			are equivalent, it suffices so show that $\sigma_1(x)=\sigma_2(x)$. 
+			This is because every automorphism of $Aut(K(x)/K)$ is uniquely 
+			determined by $x$. 
+		\end{remark}
+			First, $\Phi$ preserves
+			identity: $\Phi(\begin{pmatrix} 1 & 0 \\ 0 & 1 \\ \end{pmatrix})(x) = (1x + 0)/(0x +1) = x = i(x)$
+			where $i$ is the indentiy automorphism of $Aut(K(x)/K)$. Let $A,B \in GL_2(K)$.
+			Then $A = \begin{pmatrix} a & c \\ b & d \\ \end{pmatrix} , B = \begin{pmatrix} e & g \\ f & h \\ \end{pmatrix} $ 
+			for $a,b,c,d,e,f,g,h \in K$. Then
+			\begin{align*}
+				\Phi (\begin{pmatrix} a & c \\ b & d \\ \end{pmatrix}
+				\begin{pmatrix} e & g \\ f & h \\ \end{pmatrix})(x) &= 
+				\Phi (\begin{pmatrix} ae + cf & ag + ch \\ be + df & bg + dh \\ \end{pmatrix})(x) \\
+				&= \frac{(ae+cf)x + be+df}{(ag+ch)x+bg+dh} (x)\\
+				&= \frac{e(ax+b) + (cx+d)f}{g(ax+b)+ (cx+d)h} \\
+				&= \frac{[e(ax+b) + (cx+d)f](cx+d)}{[g(ax+b)+ (cx+d)h](cx+d)} \\
+				&= \frac{\frac{e(ax+b) + (cx+d)f}{(cx+d)}}{\frac{g(ax+b) + (cx+d)h}{(cx+d)}} \\
+				&= \frac{\frac{e(ax+b)}{(cx+d)}+f}{\frac{g(ax+b)}{(cx+d)}+h} \\
+				&= \frac{e\sigma_A(x)+f}{g\sigma_A(x)+h} \\
+				&= \sigma_A(\frac{ex+f}{gx+h})(x) \\
+				&= \sigma_A \circ \sigma_B (x) \\
+				&= \Phi(\begin{pmatrix} a & c \\ b & d \\ \end{pmatrix}) \Phi(\begin{pmatrix} e & g \\ f & h \\ \end{pmatrix}) (x)
+				\end{align*}
+			\noindent Hence $\Phi$ is a group homomorphism. Clearly
+			$\Phi(\begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix})(x) = \frac{ax + 0}{0x +a} = x = i(x)$. 
+			So $\begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix} \in ker(\Phi)$. 
+			Let $A = \begin{pmatrix} a & c \\ b & d \\ \end{pmatrix} \in ker(\Phi)$, 
+			then $\frac{ax+b}{cx + d} = x \Rightarrow 0 = cx^2 + (d-a)x - b \Rightarrow a = d, b = c = 0$. 
+			Notice that $a=d = 0$ implies $ad - bc = 0$, which is not allowed here. 
+			Hence $ker(\Phi) = \begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix} $
+			where $a \in K^{\times}$. Let $\sigma \in Aut(K(x)/K)$, 
+			then by part \eqref{existsabcd}, there exists $a,b,c,d \in K$ such that 
+			$\sigma(x) = \frac{ax+b}{cx+d}$, that is there exists 
+			$A = \begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix} \in GL_2(K)$ such that 
+			$\Phi(A) = \sigma$. Hence $\Phi$ is surjective and $Aut(K(x)/K) \cong GL_2(K)/\mathfrak{K}$,
+			where $\mathfrak{K} = \begin{pmatrix} a & 0 \\ 0 & a \\ \end{pmatrix}$ for $a \in K^{\times}$.
+	\end{enumerate}
 \end{solution}
     
 
 \begin{exercise}(Stichtenoth, Exercise 1.4)
-Let $K(x)$ be the rational function field over $K$. Find 
-bases for the following Riemann-Roch spaces: 
-\begin{enumerate}[(i)]
-\item \label{infinity} 		$\mathscr{L}(rP_{\infty})$
-\item \label{linear}   		$\mathscr{L}(rP_{\alpha})$
-\item \label{irreducible11} 	$\mathscr{L}(P_{p(x)})$
-\end{enumerate}
-where $R \geq 0$, and the places $P_{\infty}, P_{\alpha}$ and $P_{p(x)}$
-are as in section $1.2$ of Stichtenoth. 
+	Let $K(x)$ be the rational function field over $K$. Find 
+	bases for the following Riemann-Roch spaces: 
+	\begin{enumerate}[(i)]
+		\item \label{infinity} 		$\mathscr{L}(rP_{\infty})$
+		\item \label{linear}   		$\mathscr{L}(rP_{\alpha})$
+		\item \label{irreducible11} 	$\mathscr{L}(P_{p(x)})$
+	\end{enumerate}
+	where $R \geq 0$, and the places $P_{\infty}, P_{\alpha}$ and $P_{p(x)}$
+	are as in section $1.2$ of Stichtenoth. 
 \end{exercise}
 
 \begin{solution}
-\eqref{infinity}: Let $r \geq 0$. $\mathscr{L}(rP_{\infty})$: Write $z \in K(x)^*$ as $z = f/g$ 
-where $f,g$ are relatively prime in $K[x]$. Then $z \in \mathscr{L}(rP_\infty)$ 
-if and only if $v_P(z) + v_P(rP_\infty) \geq 0 $ for all 
-$P \in \mathbb{P}_{K(x)}$ if and only if $v_P(z) + 0 \geq 0 $ 
-for all $P\in \mathbb{P}_{K(x)} \backslash \lbrace P_\infty \rbrace $ 
-and $v_\infty(z) + r \geq 0$ if and only if $z \in K[x]$ and 
-$r \geq \deg(f)$. Hence $\mathscr{L}(r P_\infty)$ is the vector space 
-of all polynomial in $K[x]$ with degree less than or equal to 
-$r$. Transcedance of $x$ over $K$ implies $1,x,x^2,...,x^r$ 
-are linearly independent over $K$ and clearly they span 
-$\mathscr{L}(rP_\infty)$. Hence $\ell(rP_\infty) = r+1$. 
+	\eqref{infinity}: Let $r \geq 0$. $\mathscr{L}(rP_{\infty})$: Write $z \in K(x)^*$ as $z = f/g$ 
+	where $f,g$ are relatively prime in $K[x]$. Then $z \in \mathscr{L}(rP_\infty)$ 
+	if and only if $v_P(z) + v_P(rP_\infty) \geq 0 $ for all 
+	$P \in \mathbb{P}_{K(x)}$ if and only if $v_P(z) + 0 \geq 0 $ 
+	for all $P\in \mathbb{P}_{K(x)} \backslash \lbrace P_\infty \rbrace $ 
+	and $v_\infty(z) + r \geq 0$ if and only if $z \in K[x]$ and 
+	$r \geq \deg(f)$. Hence $\mathscr{L}(r P_\infty)$ is the vector space 
+	of all polynomial in $K[x]$ with degree less than or equal to 
+	$r$. Transcedance of $x$ over $K$ implies $1,x,x^2,...,x^r$ 
+	are linearly independent over $K$ and clearly they span 
+	$\mathscr{L}(rP_\infty)$. Hence $\ell(rP_\infty) = r+1$. 
 
-\eqref{linear}: Since $P_a$ corresponds to the linear polynomial
-$p = x - a$, so $\deg P = 1$. By proposition \ref{0923d091sd0192s}, there 
-exists $t \in K(x)$ such that $\OV_{P_a} = K[t^{-1}]_{(t^{-1})}$. Then
-from the solution to \eqref{infinity}, $\lbrace 1,t,t^2,...,t^r \rbrace$ is a $K$-basis
-for $\mathscr{L}(rP_{\alpha})$ with dimension $r + 1$.
+	\eqref{linear}: Since $P_a$ corresponds to the linear polynomial
+	$p = x - a$, so $\deg P = 1$. By proposition \ref{0923d091sd0192s}, there 
+	exists $t \in K(x)$ such that $\OV_{P_a} = K[t^{-1}]_{(t^{-1})}$. Then
+	from the solution to \eqref{infinity}, $\lbrace 1,t,t^2,...,t^r \rbrace$ is a $K$-basis
+	for $\mathscr{L}(rP_{\alpha})$ with dimension $r + 1$.
 
-\eqref{irreducible11}: Let $n = \deg p(x)$. Then since 
-$p(x)$ is irriducible over $K$, all other places of 
-the form $P_{q(x)}$ for some irreducible polynomial $q(x) \in K[x]$
-will have valuation $0$. Thus by theorem \ref{Princ0}, $v_\infty(p) = -n$.
-Hence if $z \in \LL(P_{p(x)})$, then $v_\infty(z) \geq -n$. 
-Similarly, $v_P(z) \geq 0$ for all $P \in \PF \backslash \lbrace P_{p(x)},P_\infty \rbrace$.
-So $z \in K[x]$. This implies that $z$ is a polynomial in $K[x]$ with degree 
-less than or equal to $n$. Then clearly $\LL(P_{p(x)})$ has $K$-basis $\lbrace 1,x,...,x^{n} \rbrace$,
-which implies $\ell(P_{p(x)}) = n+1$.
-
+	\eqref{irreducible11}: Let $n = \deg p(x)$. Then since 
+	$p(x)$ is irriducible over $K$, all other places of 
+	the form $P_{q(x)}$ for some irreducible polynomial $q(x) \in K[x]$
+	will have valuation $0$. Thus by theorem \ref{Princ0}, $v_\infty(p) = -n$.
+	Hence if $z \in \LL(P_{p(x)})$, then $v_\infty(z) \geq -n$. 
+	Similarly, $v_P(z) \geq 0$ for all $P \in \PF \backslash \lbrace P_{p(x)},P_\infty \rbrace$.
+	So $z \in K[x]$. This implies that $z$ is a polynomial in $K[x]$ with degree 
+	less than or equal to $n$. Then clearly $\LL(P_{p(x)})$ has $K$-basis $\lbrace 1,x,...,x^{n} \rbrace$,
+	which implies $\ell(P_{p(x)}) = n+1$.
 \end{solution}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
+  
 \begin{exercise}(Stichtenoth, Exercise 1.5) \label{PForPartial}
     
 (\textit{Representation of rational funcitons by partial fractions})
     
 \begin{enumerate}[(i)]
-\item Show that every $z \in K(x)$ can be written as 
-$$z = \sum^r_{i = 1} \sum^{k_i}_{j=1} \frac{c_{ij}(x)}{p_i(x)^j} + h(x)$$ where 
+	\item Show that every $z \in K(x)$ can be written as 
+	$$z = \sum^r_{i = 1} \sum^{k_i}_{j=1} \frac{c_{ij}(x)}{p_i(x)^j} + h(x)$$ where 
 
-\begin{enumerate}
-\item $p_1(x),...,p_r(x)$ are distinc monic irreducible polynomials in $K[x]$,
-\item $k_1,...,k_r \geq 1$,
-\item $c_{ij}(x) \in K[x]$ and $deg(c_{ij}(x)) < deg(p_i(x))$,
-\item $c_{ik_i}(x) \neq 0$ for $1 \leq i \leq r$,
-\item $h(x) \in K[x]$
-\end{enumerate}
-
-Note that the case $r = 0$ is allowed; it just means that $z = h(x) \in K[x]$.
-    
-% \item Show that the above representation of $z$ is unique.
-
+	\begin{enumerate}
+		\item $p_1(x),...,p_r(x)$ are distinc monic irreducible polynomials in $K[x]$,
+		\item $k_1,...,k_r \geq 1$,
+		\item $c_{ij}(x) \in K[x]$ and $deg(c_{ij}(x)) < deg(p_i(x))$,
+		\item $c_{ik_i}(x) \neq 0$ for $1 \leq i \leq r$,
+		\item $h(x) \in K[x]$
+	\end{enumerate}
+	\item Show that the above representation of $z$ is unique.
 \end{enumerate}
 \end{exercise}
 
 \begin{solution}
+	\begin{enumerate}[(i)] 
+		\item Let $z = f(x)/g(x) \in K(x)$. If $\deg(f) \geq \deg(g)$, 
+		then we may write $f = q(x)g(x) + r(x)$ with $q(x),r(x) \in K[x]$ and
+		$\deg(r(x)) < \deg(g(x))$. Then $f(x)/g(x) = q(x) + r(x)/g(x)$ and we may use 
+		the following argument for $r(x)$ instead of $f(x)$.
+		Hence it suffices to consider the case 
+		where $\deg(g(x)) > \deg(f(x))$. Write $g(x) = p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}$ 
+		where $e_1,e_2,...,e_s \in \Integ^{+}$ and $p_1,p_2,...,p_s$ are distinct 
+		prime factors of $g(x)$. Suppose $deg(f) < deg(g)$. Then 
+		$$\text{gcd}(p_1(x)^{e_1},p_2(x)^{e_2}...p_s(x)^{e_s}) = 1$$ hence there exists 
+		$h_1(x),h_2(x) \in K[x]$ such that $$1 = h_1(x)p_1(x)^{e_1} + h_2(x)p_2(x)^{e_2}...p_s(x)^{e_s}$$ 
+		Thus $$f(x) = f(x)h_1(x)p_1(x)^{e_1} + f(x)h_2(x)p_2(x)^{e_2}...p_s(x)^{e_s}$$ 
+		We may divide and write $h_1(x)f(x) = p_1(x)^{e_1}q(x) + r_1(x)$ 
+		for some $q(x),r_1(x) \in K[x]$ with $deg(r(x)) < deg(q(x))$. 
+		Let $$r_2(x) = h_2(x)p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s} + q(x)p_2(x)^{e_2}...p_s(x)^{e_s}$$ 
 
-\begin{enumerate}[(i)]
-   
-\item Let $z = f(x)/g(x) \in K(x)$. If $\deg(f) \geq \deg(g)$, 
-then we may write $f = q(x)g(x) + r(x)$ with $q(x),r(x) \in K[x]$ and
-$\deg(r(x)) < \deg(g(x))$. Then $f(x)/g(x) = q(x) + r(x)/g(x)$ and we may use 
-the following argument for $r(x)$ instead of $f(x)$.
-Hence it suffices to consider the case 
-where $\deg(g(x)) > \deg(f(x))$. Write $g(x) = p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}$ 
-where $e_1,e_2,...,e_s \in \Integ^{+}$ and $p_1,p_2,...,p_s$ are distinct 
-prime factors of $g(x)$. Suppose $deg(f) < deg(g)$. Then 
-$$\text{gcd}(p_1(x)^{e_1},p_2(x)^{e_2}...p_s(x)^{e_s}) = 1$$ hence there exists 
-$h_1(x),h_2(x) \in K[x]$ such that $$1 = h_1(x)p_1(x)^{e_1} + h_2(x)p_2(x)^{e_2}...p_s(x)^{e_s}$$ 
-Thus $$f(x) = f(x)h_1(x)p_1(x)^{e_1} + f(x)h_2(x)p_2(x)^{e_2}...p_s(x)^{e_s}$$ 
-We may divide and write $h_1(x)f(x) = p_1(x)^{e_1}q(x) + r_1(x)$ 
-for some $q(x),r_1(x) \in K[x]$ with $deg(r(x)) < deg(q(x))$. 
-Let $$r_2(x) = h_2(x)p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s} + q(x)p_2(x)^{e_2}...p_s(x)^{e_s}$$ 
+		\begin{align*} 
+			f(x) &= p_1(x)^{e_1}r_2(x) - p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}q(x) \\
+			&+ p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}f(x) + p_2(x)^{e_2}...p_s(x)^{e_s}r_1(x) \\
+			&= p_1(x)^{e_1}r_2(x) + p_2(x)^{e_2}...p_s(x)^{e_s}r_1(x)
+		\end{align*}
+		Hence $\frac{f(x)}{g(x)} = \frac{r_1(x)}{p_1(x)^{e_1}} + \frac{r_2(x)}{p_2(x)^{e_2}...p_s(x)^{e_s}} $. 
+		Claim: $deg(r_2(x)) < deg(p_2(x)^{e_2}...p_s(x)^{e_s})$: Suppose the opposite, 
+		then $deg(p_1(x)^{e_1}r_2(x)) \geq deg(p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s})$ 
+		but we also have 
+		$$deg(p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}) >  
+		deg(deg(p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}r_1(x))$$
+		Then
+		    
+		\begin{align*}
+			deg(f(x)) &= deg(p_1(x)^{e_1}r_2(x) + p_2(x)^{e_2}...p_s(x)^{e_s}r_1(x)) \\
+			&= deg(p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}r_2(x)) \\
+			&\geq deg(p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}) \\
+			&= deg(p_1(x)^{e_1}) + deg(p_2(x)^{e_2}...p_s(x)^{e_s}) \\
+			&< deg(f(x))
+		\end{align*}
 
-\begin{align*} 
-f(x) &= p_1(x)^{e_1}r_2(x) - p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}q(x) \\
-&+ p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}f(x) + p_2(x)^{e_2}...p_s(x)^{e_s}r_1(x) \\
-&= p_1(x)^{e_1}r_2(x) + p_2(x)^{e_2}...p_s(x)^{e_s}r_1(x)
-\end{align*}
-Hence $\frac{f(x)}{g(x)} = \frac{r_1(x)}{p_1(x)^{e_1}} + \frac{r_2(x)}{p_2(x)^{e_2}...p_s(x)^{e_s}} $. 
-Claim: $deg(r_2(x)) < deg(p_2(x)^{e_2}...p_s(x)^{e_s})$: Suppose the opposite, 
-then $deg(p_1(x)^{e_1}r_2(x)) \geq deg(p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s})$ 
-but we also have 
-$$deg(p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}) >  
-deg(deg(p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}r_1(x))$$
-Then
-    
-\begin{align*}
-deg(f(x)) &= deg(p_1(x)^{e_1}r_2(x) + p_2(x)^{e_2}...p_s(x)^{e_s}r_1(x)) \\
-&= deg(p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}r_2(x)) \\
-&\geq deg(p_1(x)^{e_1}p_2(x)^{e_2}...p_s(x)^{e_s}) \\
-&= deg(p_1(x)^{e_1}) + deg(p_2(x)^{e_2}...p_s(x)^{e_s}) \\
-&< deg(f(x))
-\end{align*}
+		This is a contradiction, so the claim is verified. 
 
-This is a contradiction, so the claim is verified. 
-
-Hence we may 
-repeat this processess $s-1$ times to obtain the expression
-$$\frac{f(x)}{g(x)} = \sum^s_{i=1}\frac{r_i(x)}{p_i(x)^{e_i}}$$ 
-We now need to expand the powers of $p_i(x)$ for $i=1,...,s$. 
-For $i=1,...,s$, let $r_{i0}(x) = p_i(x)$  and for $j=1,...,e_s$ 
-we can use the division algorithm to find $q_{ij}(x),r_{ij}(x) \in K[x]$ 
-such that $$q_{i(j-1)}(x) = q_ij(x)p_i(x) + r_{ij}(x)$$ where $\deg(r_{ij}(x)) < \deg(q_{ij}(x))$.
-Using back substitution, we find 
-\begin{align*}
-r_i(x)_i(x) &= q_{i0}(x) \\
-&= q_{i1}(x)p_i(x) + r_{i1}(x) \\
-&= (q_{i2}(x)p_i(x)+r_{i2}(x))p_i(x) + r_{i1}(x) \\
-&= ... \\
-&= q_{ie_{s}}(x)p_i(x)^{e_s} + r_{ie_{s}}(x)p_i(x)^{e_s -1} \\
-&+ r_{i(e_s -1)}(x)p_i(x)^{e_s -2} + ... + r_{i2}(x)p_i(x) + r_{i1}(x) \\
-\Longrightarrow \frac{r_i(x)}{p_i(x)^{e_s}} &= q_{ie_s}(x) + 
-\frac{r_{ie_s}(x)}{p_i(x)}+ \frac{r_{i(e_s -1)}(x)}{p_i(x)^2} + 
-...+ \frac{r_{i2}(x)}{p_i(x)^{e_s - 1}} + \frac{r_{i1}(x)}{p_i(x)^{e_s}}
-\end{align*}
-
-Hence $$\frac{f(x)}{g(x)} = \sum^s_{i=1}(q_{ie_s}(x) + \sum^i_{j=1}  \frac{r_{ij}(x)}{p_i(x)^j})$$
-Let $h(x) = \sum^s_{i=1}q_{ie_s}(x)$, $c_{ij}(x)=r_{if(x)}$, $e=k$ and $r = s$. Then 
-$$z = \sum^r_{i = 1} \sum^{k_i}_{j=1} \frac{c_{ij}(x)}{p_i(x)^j} + h(x)$$ as required.
-
-\end{enumerate}
-
-
+		Hence we may 
+		repeat this processess $s-1$ times to obtain the expression
+		$$\frac{f(x)}{g(x)} = \sum^s_{i=1}\frac{r_i(x)}{p_i(x)^{e_i}}$$ 
+		We now need to expand the powers of $p_i(x)$ for $i=1,...,s$. 
+		For $i=1,...,s$, let $r_{i0}(x) = p_i(x)$  and for $j=1,...,e_s$ 
+		we can use the division algorithm to find $q_{ij}(x),r_{ij}(x) \in K[x]$ 
+		such that $$q_{i(j-1)}(x) = q_ij(x)p_i(x) + r_{ij}(x)$$ where $\deg(r_{ij}(x)) < \deg(q_{ij}(x))$.
+		Using back substitution, we find 
+		\begin{align*}
+			r_i(x)_i(x) &= q_{i0}(x) \\
+			&= q_{i1}(x)p_i(x) + r_{i1}(x) \\
+			&= (q_{i2}(x)p_i(x)+r_{i2}(x))p_i(x) + r_{i1}(x) \\
+			&= ... \\
+			&= q_{ie_{s}}(x)p_i(x)^{e_s} + r_{ie_{s}}(x)p_i(x)^{e_s -1} \\
+			&+ r_{i(e_s -1)}(x)p_i(x)^{e_s -2} + ... + r_{i2}(x)p_i(x) + r_{i1}(x) \\
+			\Longrightarrow \frac{r_i(x)}{p_i(x)^{e_s}} &= q_{ie_s}(x) + 
+			\frac{r_{ie_s}(x)}{p_i(x)}+ \frac{r_{i(e_s -1)}(x)}{p_i(x)^2} + 
+			...+ \frac{r_{i2}(x)}{p_i(x)^{e_s - 1}} + \frac{r_{i1}(x)}{p_i(x)^{e_s}}
+		\end{align*}
+		Hence $$\frac{f(x)}{g(x)} = \sum^s_{i=1}(q_{ie_s}(x) + \sum^i_{j=1}  \frac{r_{ij}(x)}{p_i(x)^j})$$
+		Let $h(x) = \sum^s_{i=1}q_{ie_s}(x)$, $c_{ij}(x)=r_{if(x)}$, $e=k$ and $r = s$. Then 
+		$$z = \sum^r_{i = 1} \sum^{k_i}_{j=1} \frac{c_{ij}(x)}{p_i(x)^j} + h(x)$$ as required.
+	\end{enumerate}
 \end{solution}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{exercise}(Stichtenoth, Exercise 1.7)
-There are many analogies between algebraic function fields and 
-algebraic number fields (i.e., finite extensions of the field 
-$\Rat$ of rational numbers). Here is a first example. \\
-
-A valuation ring of  field $L$ is a subring $\OV \subsetneq L$ 
-such that for all $z \in L$ one has $z \in \OV$ or $z^{-1} \in \OV$.
-
-\begin{enumerate}[(i)]
-
-\item Show that every valuation ring is a local ring 
-(i.e., it has a unique maximal ideal)
-
-\item Now we consider the field $L = \Rat$. Show that for every 
-prime number $p\in \Integ$, the set 
-$\Integ_{(p)} := \lbrace a/b \in \Rat \mid a,b \in \Integ , b \notin (p) \rbrace $ 
-is a valuation ring of $\Rat$. What is the maximal ideal of $\Integ_{(p)}$?  
-
-\item Let $\OV$ be a valuation ring of $\Rat$. 
-Show that $\OV = \Integ_{(p)}$ for some prime number $p$.
-
-\end{enumerate}
+		A valuation ring of  field $L$ is a subring $\OV \subsetneq L$ 
+		such that for all $z \in L$ one has $z \in \OV$ or $z^{-1} \in \OV$.
+		\begin{enumerate}[(i)]
+			\item Show that every valuation ring is a local ring 
+			(i.e., it has a unique maximal ideal)
+			\item Now we consider the field $L = \Rat$. Show that for every 
+			prime number $p\in \Integ$, the set 
+			$\Integ_{(p)} := \lbrace a/b \in \Rat \mid a,b \in \Integ , b \notin (p) \rbrace $ 
+			is a valuation ring of $\Rat$. What is the maximal ideal of $\Integ_{(p)}$?  
+			\item Let $\OV$ be a valuation ring of $\Rat$. 
+			Show that $\OV = \Integ_{(p)}$ for some prime number $p$.
+	\end{enumerate}
 \end{exercise}
 
 \begin{solution}
-We use the definition of a ``valuation ring'' as given above. 
-\begin{enumerate}[(i)]
+	We use the definition of a ``valuation ring'' as given above. 
+	\begin{enumerate}[(i)]
+		\item Let $\OV$ be a valuation ring of a field $L$. 
+		We claim that $\m = \OV \backslash \OV^*$ is the only 
+		maximal ideal of $\OV$. Let $x \in \m$ and $y \in \OV$. 
+		Notice $xy \in \OV^* \Longrightarrow x \in \OV^*$, which 
+		is impossible since $x \in \m = \OV \backslash \OV^*$. 
+		Hence $xy \in \m$. Let both $x,y \in \m$. Since $\OV$ 
+		is a valuation ring, either $xy^{-1} \in \OV$ or $x^{-1}y \in \OV$. 
+		Assume $xy^{-1} \in \OV$, then $1 + xy^{-1} \in \OV$. 
+		Hence $y + x = y(1+xy^{-1}) \in \m$, since $y \in \m$. 
+		So $\m$ is an ideal of $\OV$. Suppose $I$ is another 
+		ideal of $\OV$ with $\m \subsetneq I \subset \OV$. 
+		Then $I$ must contain a 
+		unit of $\OV$, which would imply $I = \OV$. lastly 
+		any other maximal ideal $M$ of $\OV$ would be properly 
+		contained in $\m$. So $\m$ the only maximal ideal of the 
+		local ring $\OV$.
 
-\item Let $\OV$ be a valuation ring of a field $L$. 
-We claim that $\m = \OV \backslash \OV^*$ is the only 
-maximal ideal of $\OV$. Let $x \in \m$ and $y \in \OV$. 
-Notice $xy \in \OV^* \Longrightarrow x \in \OV^*$, which 
-is impossible since $x \in \m = \OV \backslash \OV^*$. 
-Hence $xy \in \m$. Let both $x,y \in \m$. Since $\OV$ 
-is a valuation ring, either $xy^{-1} \in \OV$ or $x^{-1}y \in \OV$. 
-Assume $xy^{-1} \in \OV$, then $1 + xy^{-1} \in \OV$. 
-Hence $y + x = y(1+xy^{-1}) \in \m$, since $y \in \m$. 
-So $\m$ is an ideal of $\OV$. Suppose $I$ is another 
-ideal of $\OV$ with $\m \subsetneq I \subset \OV$. 
-Then $I$ must contain a 
-unit of $\OV$, which would imply $I = \OV$. lastly 
-any other maximal ideal $M$ of $\OV$ would be properly 
-contained in $\m$. So $\m$ the only maximal ideal of the 
-local ring $\OV$.
+		\item Let $p$ be a prime number and $z = a/b \in \raggedbottom$
+		with $gcd(a,b)=1$. If $p \nmid b$, then $z \in \Integ_{(p)}$. 
+		If $p \mid b $ but $p \nmid a$, then $z^{-1} = b/a \in \Integ_{(p)}$. 
+		If $p \mid a$ and $p \mid b$, then $gcd(a,b) \neq 1$, 
+		which contradicts our assumption that $gcd(a,b) =1$. 
+		Hence $\Integ_{(p)}$ is a valutation ring of $\raggedbottom$. We claim 
+		that the maximal ideal of $\Integ_{(p)}$ is 
+		$(p)\Integ_{(p)} := \lbrace a/b \in \raggedbottom 
+		\mid a,b \in \Integ, b \notin (p), a \in (p) \rbrace $. 
+		We want to show that $(p)\Integ_{(p)} = \Integ_{(p)} \backslash \Integ_{(p)}^*$. 
+		Let $z = a/b \in \OV^*$ such that $gcd(a,b)=1$, then 
+		$z^{-1} = b/a \in \OV$. That is $p \nmid a$ and $p \nmid b$. 
 
-\item Let $p$ be a prime number and $z = a/b \in \raggedbottom$
-with $gcd(a,b)=1$. If $p \nmid b$, then $z \in \Integ_{(p)}$. 
-If $p \mid b $ but $p \nmid a$, then $z^{-1} = b/a \in \Integ_{(p)}$. 
-If $p \mid a$ and $p \mid b$, then $gcd(a,b) \neq 1$, 
-which contradicts our assumption that $gcd(a,b) =1$. 
-Hence $\Integ_{(p)}$ is a valutation ring of $\raggedbottom$. We claim 
-that the maximal ideal of $\Integ_{(p)}$ is 
-$(p)\Integ_{(p)} := \lbrace a/b \in \raggedbottom 
-\mid a,b \in \Integ, b \notin (p), a \in (p) \rbrace $. 
-We want to show that $(p)\Integ_{(p)} = \Integ_{(p)} \backslash \Integ_{(p)}^*$. 
-Let $z = a/b \in \OV^*$ such that $gcd(a,b)=1$, then 
-$z^{-1} = b/a \in \OV$. That is $p \nmid a$ and $p \nmid b$. 
-
-\item Let $P$ be the maximal ideal of $\OV$, by theorem
-\ref{primeValuation} there exists $t \in P$ such that 
-$(t) = P$. Write $t = p/q$ for $p,q \in \Integ \backslash \lbrace  0  \rbrace$. 
-Suppose $q \neq 1$. Then $(t) \subsetneqq (p) \subsetneqq \Rat$. 
-Which would contradict the minimality of $P$. Hence we may assume 
-that $t = p$. Suppose $p$ is not prime, then there exists 
-$n,m \in \Integ $ with $n,m >1$ such that $p=nm$. 
-But then $(p) \subsetneqq (n) \subsetneqq \Rat$, again a 
-contradiction. Thus $p$ must be prime.  
-
-\end{enumerate}
+		\item Let $P$ be the maximal ideal of $\OV$, by theorem
+		\ref{primeValuation} there exists $t \in P$ such that 
+		$(t) = P$. Write $t = p/q$ for $p,q \in \Integ \backslash \lbrace  0  \rbrace$. 
+		Suppose $q \neq 1$. Then $(t) \subsetneqq (p) \subsetneqq \Rat$. 
+		Which would contradict the minimality of $P$. Hence we may assume 
+		that $t = p$. Suppose $p$ is not prime, then there exists 
+		$n,m \in \Integ $ with $n,m >1$ such that $p=nm$. 
+		But then $(p) \subsetneqq (n) \subsetneqq \Rat$, again a 
+		contradiction. Thus $p$ must be prime.  
+	\end{enumerate}
 \end{solution}

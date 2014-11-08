@@ -1,0 +1,6 @@
+PWD /Users/kevin/gd/schoo/proj/algebraicFunctionFields
+INPUT /usr/local/texlive/2014/texmf.cnf
+INPUT /usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2014/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/kevin/gd/schoo/proj/algebraicFunctionFields/algebraicfunctionfields.tex
+OUTPUT /Users/kevin/gd/schoo/proj/algebraicFunctionFields/algebraicfunctionfields.log
