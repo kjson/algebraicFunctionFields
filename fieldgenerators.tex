@@ -1,29 +1,29 @@
 \begin{definition}
-An integral domain is said to be {\it normal\/} if it is 
-integrally closed in its field of fractions.
+	An integral domain is said to be {\it normal\/} if it is 
+	integrally closed in its field of fractions.
 \end{definition}
 
 \begin{proposition} \label {i12biud012oww}
-Every UFD is normal.
+	Every UFD is normal.
 \end{proposition}
 
 \begin{proof}
-Let $A $ be a UFD and let $F$ be the field of 
-fractions of $A$. Let $z \in F$, writen $z = a/b$ such that
-$0 \neq b,a \in A$ and $a,b$ share no commmon
-primes in their factorizations. If $z$ is integral over $A$. Then 
-$z^n + a_{n-1}z^{n-1} + ... + a_1z + a_0 = 0$ for some 
-$a_0,a_1,...,a_{n-1} \in A$. That is,
-$(a/b)^n + a_{n-1}(a/b)^{n-1} + ... + a_1 (a/b) + a_0 = 0$. 
-We may clear denominators to obtain 
-$a^n + a_{n-1}a^{n-1}b + ... + a_1 ab^{n-1} + a_0b^n = 0$.
-Then $a^n = -b(a_{n-1}a^{n-1} + ... + a_1 ab^{n-2} + a_0b^{n-1})$. 
-This means $b$ divides $a$. If $b$ is not a unit,
-then this imples that any prime elements
-in the factorization of $b$ appear in the factorization of $a^n$, 
-and thus also in $a$. This is a contradiction to the supposition
-that $a,b$ share no common primes in their factorization. So $b$
-must be a unit. Thus $z \in A$. 
+	Let $A $ be a UFD and let $F$ be the field of 
+	fractions of $A$. Let $z \in F$, writen $z = a/b$ such that
+	$0 \neq b,a \in A$ and $a,b$ share no commmon
+	primes in their factorizations. If $z$ is integral over $A$. Then 
+	$z^n + a_{n-1}z^{n-1} + ... + a_1z + a_0 = 0$ for some 
+	$a_0,a_1,...,a_{n-1} \in A$. That is,
+	$(a/b)^n + a_{n-1}(a/b)^{n-1} + ... + a_1 (a/b) + a_0 = 0$. 
+	We may clear denominators to obtain 
+	$a^n + a_{n-1}a^{n-1}b + ... + a_1 ab^{n-1} + a_0b^n = 0$.
+	Then $a^n = -b(a_{n-1}a^{n-1} + ... + a_1 ab^{n-2} + a_0b^{n-1})$. 
+	This means $b$ divides $a$. If $b$ is not a unit,
+	then this imples that any prime elements
+	in the factorization of $b$ appear in the factorization of $a^n$, 
+	and thus also in $a$. This is a contradiction to the supposition
+	that $a,b$ share no common primes in their factorization. So $b$
+	must be a unit. Thus $z \in A$. 
 \end{proof}
 
 % \begin{lemma}
@@ -32,75 +32,74 @@ must be a unit. Thus $z \in A$.
 
 
 \begin{example}
-The ring $A = \Comp[x,y]/(y-x^2)$ is normal: 
-Let $\phi : \Comp[x,y] \longrightarrow \Comp[t] $ 
-be given by $ f(x,y) \mapsto f(t,t^2)$. 
-Then $\phi $ is an onto homomorphism with kernel $(y-x^2)$. 
-Thus $\Comp[x,y]/(y-x^2) \cong \Comp[t]$, which is a UFD. 
+	The ring $A = \Comp[x,y]/(y-x^2)$ is normal: 
+	Let $\phi : \Comp[x,y] \longrightarrow \Comp[t] $ 
+	be given by $ f(x,y) \mapsto f(t,t^2)$. 
+	Then $\phi $ is an onto homomorphism with kernel $(y-x^2)$. 
+	Thus $\Comp[x,y]/(y-x^2) \cong \Comp[t]$, which is a UFD. 
 \end{example}
 
 \begin{example}
-The converse is not true in general. If we 
-let $A=\Comp[x,y,z]/(xy-z^2)$.
-Then $A$ is normal but not a UFD.
-To prove this, let $\phi : \Comp[z,y,z] \longrightarrow \Comp[s,t]$ 
-given as $f(x,y,z) \mapsto f(s^2,t^2,st)$. Then $\phi$ is homomorphism
-an onto the ring $B = \Comp[s^2,t^2,st]$ with kernel $(xy-z^2)$. Hence 
-$A \cong B$. We prove that $B $ is normal by 
-showing that the integral closure of $\Comp[s,t]$ in 
-$\Comp(s,t,\sqrt{st})$ is $\Comp[s,t,\sqrt{st}]$. Let 
-$u + v\sqrt{st} \in \Comp(s,t,\sqrt{st}) $ be integral over 
-$\Comp[s,t]$ for some $u,v \in \Comp(s,t)$. 
-Then since the integral closure of a integral
-domain is an integral domain, $u-v \sqrt{st}$ is in the integral
-closure of $\Comp[s,t]$ in $\Comp(s,t,\sqrt{st})$ as well. 
-Thus their sum, $2u $ belongs to this closure. Since $\Comp[s,t]$ is 
-normal, $u \in \Comp[s,t]$. Similarily, $v\sqrt{st} \in \Comp[s,t]$.
-Hence $v^2st \in \Comp[s,t], v \in \Comp(s,t)$. Clearly, then 
-$v$ can have no denominator, thus $v \in \Comp[s,t]$. Hence 
-$u + v \sqrt{st} \in \Comp[s,t]$. To see that $A$ is not a 
-UFD, notice that $z^2 = xy$. 
+	The converse is not true in general. If we 
+	let $A=\Comp[x,y,z]/(xy-z^2)$.
+	Then $A$ is normal but not a UFD.
+	To prove this, let $\phi : \Comp[z,y,z] \longrightarrow \Comp[s,t]$ 
+	given as $f(x,y,z) \mapsto f(s^2,t^2,st)$. Then $\phi$ is homomorphism
+	an onto the ring $B = \Comp[s^2,t^2,st]$ with kernel $(xy-z^2)$. Hence 
+	$A \cong B$. We prove that $B $ is normal by 
+	showing that the integral closure of $\Comp[s,t]$ in 
+	$\Comp(s,t,\sqrt{st})$ is $\Comp[s,t,\sqrt{st}]$. Let 
+	$u + v\sqrt{st} \in \Comp(s,t,\sqrt{st}) $ be integral over 
+	$\Comp[s,t]$ for some $u,v \in \Comp(s,t)$. 
+	Then since the integral closure of a integral
+	domain is an integral domain, $u-v \sqrt{st}$ is in the integral
+	closure of $\Comp[s,t]$ in $\Comp(s,t,\sqrt{st})$ as well. 
+	Thus their sum, $2u $ belongs to this closure. Since $\Comp[s,t]$ is 
+	normal, $u \in \Comp[s,t]$. Similarily, $v\sqrt{st} \in \Comp[s,t]$.
+	Hence $v^2st \in \Comp[s,t], v \in \Comp(s,t)$. Clearly, then 
+	$v$ can have no denominator, thus $v \in \Comp[s,t]$. Hence 
+	$u + v \sqrt{st} \in \Comp[s,t]$. To see that $A$ is not a 
+	UFD, notice that $z^2 = xy$. 
 \end{example}
 
 \begin{remark}
-Recall that if $R$ is an integral domain and 
-$S \subseteq R \setminus \{0\}$ is a multiplicative set
-then $S^{-1}R$ is an integral domain and
-$R \subseteq S^{-1}R \subseteq \Frac(R)$, so $R$ and $S^{-1}R$ 
-have the same field of fractions.
+	Recall that if $R$ is an integral domain and 
+	$S \subseteq R \setminus \{0\}$ is a multiplicative set
+	then $S^{-1}R$ is an integral domain and
+	$R \subseteq S^{-1}R \subseteq \Frac(R)$, so $R$ and $S^{-1}R$ 
+	have the same field of fractions.
 \end{remark}
 
 
 \begin{lemma} \label {poifj012woid2q9}
-Let $R$ be an integral domain and $S \subseteq R \setminus \{0\}$ 
-a multiplicative set.
-If $R$ is normal then so is $S^{-1}R$.
+	Let $R$ be an integral domain and $S \subseteq R \setminus \{0\}$ 
+	a multiplicative set.
+	If $R$ is normal then so is $S^{-1}R$.
 \end{lemma}
 
 \begin{proof}
-Let $R$ be an integral domain (not necessarily normal),
-$S \subseteq R \setminus \{0\}$ a multiplicative
-set, $K = \Frac R$, and consider 
-$ R \subseteq \tilde R \subseteq K $
-where $\tilde R$ is the integral closure of $R$ in $K$.
-Then Prop.~5.12 of Atiyah-McDonald implies that
-$S^{-1} \tilde R$ is the integral closure of $S^{-1}R$ in $S^{-1}K=K$. 
-If we now assume that $R$ is normal then $\tilde R = R$, so
-$S^{-1} R$ is the integral closure of $S^{-1}R$ in $K$, i.e., 
-$S^{-1} R$ is normal.
+	Let $R$ be an integral domain (not necessarily normal),
+	$S \subseteq R \setminus \{0\}$ a multiplicative
+	set, $K = \Frac R$, and consider 
+	$ R \subseteq \tilde R \subseteq K $
+	where $\tilde R$ is the integral closure of $R$ in $K$.
+	Then Prop.~5.12 of Atiyah-McDonald implies that
+	$S^{-1} \tilde R$ is the integral closure of $S^{-1}R$ in $S^{-1}K=K$. 
+	If we now assume that $R$ is normal then $\tilde R = R$, so
+	$S^{-1} R$ is the integral closure of $S^{-1}R$ in $K$, i.e., 
+	$S^{-1} R$ is normal.
 \end{proof}
 
 
 \begin{proposition}  \label {0923d091sd0192s}
-Let $F/K$ be a rational function field of one variable, 
-let $P$ be a place of $F/K$ of degree $1$,
-and let $\Oeul_{P}$ be the corresponding valuation ring 
-of $F/K$.  Then there exists $t \in F$ satisfying
-$F = K(t) $ and $\Oeul_P =  k[ t^{-1} ]_{(t^{-1})} $.
-Moreover, for any such $t$,
-$K[t] $ is the intersection of all valuation rings that 
-belong to the set $\VV(F/K) \setminus \{ \Oeul_P \}$.
-
+	Let $F/K$ be a rational function field of one variable, 
+	let $P$ be a place of $F/K$ of degree $1$,
+	and let $\Oeul_{P}$ be the corresponding valuation ring 
+	of $F/K$.  Then there exists $t \in F$ satisfying
+	$F = K(t) $ and $\Oeul_P =  k[ t^{-1} ]_{(t^{-1})} $.
+	Moreover, for any such $t$,
+	$K[t] $ is the intersection of all valuation rings that 
+	belong to the set $\VV(F/K) \setminus \{ \Oeul_P \}$.
 \end{proposition}
 
 \begin{proof}
