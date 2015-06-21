@@ -5,9 +5,7 @@
 % and create pdf.
 % You must have Latex installed on your computer.
 
-\documentclass{
-	article
-} 
+\documentclass{amsart} 
 
 \usepackage{
 	amsmath,
@@ -187,25 +185,22 @@
 % Set indents to 0
 \setlength\parindent{0pt}
 
-
 % Title and toc
 \begin{document}
 	\begin{titlepage}
 		\begin{center}
 			\HRule \\[0.4cm] % Horizontal line
-			{\huge \bfseries Algebraic Function Fields}\\[0.4cm] 
+			{\huge \bfseries Function Fields of Elliptic Curves}\\[0.4cm] 
 			\HRule \\[0.8cm] % Horizontal line
-			{\large A Document Prepared for Daniel Daigle} \\[1.0cm]
-			{\large Kevin Johnson} \\[0.5cm]
-			{\large \today}\\
+			{\large A Document Prepared for Professor Daniel Daigle} \\[0.75cm]
+			{\large Kevin Johnson} \\[0.75cm]
+			{\large University of Ottawa} \\[0.75cm]
+			{\large August 31, 2014}
 		\end{center}
 	\end{titlepage}
 
 	\tableofcontents
 	\pagebreak
-
-
-	% main document 
 	\section{Places}
 		\input{places}
 	\section{The Rational Function Field}
